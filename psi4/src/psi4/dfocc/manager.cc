@@ -44,7 +44,7 @@ void DFOCC::omp2_manager() {
     time4grad = 0;         // means I will not compute the gradient
     mo_optimized = 0;      // means MOs are not optimized
     orbs_already_opt = 0;  // means orbitals are not optimized yet.
-    orbs_already_sc = 0;   // menas orbitals are not semicanonical yet.
+    orbs_already_sc = 0;   // means orbitals are not semicanonical yet.
     timer_on("DF CC Integrals");
     df_corr();
     trans_corr();

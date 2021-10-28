@@ -45,7 +45,7 @@ class SymBlockMatrix {
     int nirreps_;       // Number of irreps
 
    public:
-    SymBlockMatrix();  // default constructer
+    SymBlockMatrix();  // default constructor
     SymBlockMatrix(std::string name, int nirreps, int *ins_rowspi, int *ins_colspi);
     ~SymBlockMatrix();  // destructer
 
@@ -66,7 +66,7 @@ class SymBlockVector {
     int nirreps_;       // Number of irreps
 
    public:
-    SymBlockVector();  // default constructer
+    SymBlockVector();  // default constructor
     SymBlockVector(std::string name);
     SymBlockVector(int nirreps, int *ins_dimvec);
     SymBlockVector(std::string name, int nirreps, int *ins_dimvec);

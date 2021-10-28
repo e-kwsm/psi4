@@ -29,7 +29,7 @@
 /*! \file
     \ingroup CCDENSITY
     \brief  Calculates the one- and two-electron CC energies using the
-    coresponding one- and two-particle density matrices.
+    corresponding one- and two-particle density matrices.
 */
 #include <cstdio>
 #include "psi4/libdpd/dpd.h"

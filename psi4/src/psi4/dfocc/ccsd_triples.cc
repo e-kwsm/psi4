@@ -2263,7 +2263,7 @@ void DFOCC::ccsd_canonic_triples_grad2() {
 }  // end ccsd_canonic_triples_grad2
 
 //======================================================================
-//       Asymetric Triples: (AT)
+//       Asymmetric Triples: (AT)
 //======================================================================
 void DFOCC::ccsdl_canonic_triples_disk() {
     // defs

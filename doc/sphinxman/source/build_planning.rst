@@ -1428,7 +1428,7 @@ I. Build with MKL and GCC (iomp5 needed instead of gomp for threading. use OpenM
   and CMake variables is purely formal. In practice, they get run
   together and linked as ``${LAPACK_LIBRARIES} ${BLAS_LIBRARIES}``.
 
-* Sometimes the CMake's library search capabilites falter at SONAMEs
+* Sometimes the CMake's library search capabilities falter at SONAMEs
   (*e.g.*, ``libblas.so.3`` *vs.* ``libblas.so``), extensions (static
   *vs.* dynamic), or suffixes (*e.g.*, ``libacml_mp.so`` *vs.*
   ``libacml.so``). The developers would be interested in hearing
@@ -1554,7 +1554,7 @@ Debugging |PSIfour| has gotten a little confusing now that it's running through 
 .. of the complementary error function is being called.  The internet seems to claim that this is a
 .. bug the arises only in debugging mode and has something to do with the exponent boost chooses for
 .. the default zero tolerance.  Anyways, commenting out lines 47 to 49, for valgrind purposes, should
-.. allow you to run valgrind.  The consequence of commenting out these lines are you get no integeral
+.. allow you to run valgrind.  The consequence of commenting out these lines are you get no integral
 .. screening, so make sure you uncomment them when you actually run.
 
 
