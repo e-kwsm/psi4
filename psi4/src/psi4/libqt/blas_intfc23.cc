@@ -1761,7 +1761,7 @@ void C_DSYRK(char uplo, char trans, int n, int k, double alpha, double* a, int l
  *           ( 1 + ( n - 1 )*abs( INCX ) ).
  *           Before entry, the incremented array X must contain the n
  *           element vector x. On exit, X is overwritten with the
- *           tranformed vector x.
+ *           transformed vector x.
  *
  *  INCX   - INTEGER.
  *           On entry, INCX specifies the increment for the elements of
@@ -2021,7 +2021,7 @@ void C_DTBSV(char uplo, char trans, char diag, int n, int k, double* a, int lda,
  *           ( 1 + ( n - 1 )*abs( INCX ) ).
  *           Before entry, the incremented array X must contain the n
  *           element vector x. On exit, X is overwritten with the
- *           tranformed vector x.
+ *           transformed vector x.
  *
  *  INCX   - INTEGER.
  *           On entry, INCX specifies the increment for the elements of
@@ -2380,7 +2380,7 @@ void C_DTRMM(char side, char uplo, char transa, char diag, int m, int n, double 
  *           ( 1 + ( n - 1 )*abs( INCX ) ).
  *           Before entry, the incremented array X must contain the n
  *           element vector x. On exit, X is overwritten with the
- *           tranformed vector x.
+ *           transformed vector x.
  *
  *  INCX   - INTEGER.
  *           On entry, INCX specifies the increment for the elements of

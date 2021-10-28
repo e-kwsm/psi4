@@ -50,7 +50,7 @@ SCF::SCF(SharedWavefunction ref_wfn, Options& options_, std::shared_ptr<PSIO> ps
 }
 
 SCF::~SCF() {
-    // This is now called explicity after a run, because the pointer to the wavefunction object
+    // This is now called explicitly after a run, because the pointer to the wavefunction object
     // is held in Process::environment, so this doesn't go out of scope until the end of the run
     // cleanup();
 }

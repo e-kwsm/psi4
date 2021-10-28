@@ -69,7 +69,7 @@ void CIWavefunction::get_parameters(Options &options) {
     char line1[133];
     double junk;
 
-    /* need to figure out wheter to filter tei's */
+    /* need to figure out whether to filter tei's */
     Parameters_->dertype = options.get_str("DERTYPE");
     Parameters_->wfn = options.get_str("WFN");
 

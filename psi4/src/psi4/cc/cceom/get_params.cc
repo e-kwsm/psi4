@@ -103,7 +103,7 @@ void get_params(Options &options) {
         params.cachetype = 1;
     else if (cachetype == "LRU")
         params.cachetype = 0;
-    if (params.ref == 2) /* No LRU cacheing yet for UHF references */
+    if (params.ref == 2) /* No LRU caching yet for UHF references */
         params.cachetype = 0;
 
     params.nthreads = Process::environment.get_n_threads();

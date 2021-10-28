@@ -63,7 +63,7 @@ namespace cceom {
  *  All three terms can be evaluated by the same functions in
  *  cc3_sigma_RHF given different matrix elements.
  *
- * - RHF case modifed from ccenergy cc3 code, RAK 2006
+ * - RHF case modified from ccenergy cc3 code, RAK 2006
  * */
 
 /* extern void cc3_sigma_RHF(dpdbuf4 *CIjAb, dpdbuf4 *WAbEi, dpdbuf4 *WMbIj,

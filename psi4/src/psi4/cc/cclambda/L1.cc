@@ -102,7 +102,7 @@ void L1_build(const struct L_Params& L_params) {
             }
         }
     }
-    /* excited state - no inhomogenous term, first term is -energy*L*/
+    /* excited state - no inhomogeneous term, first term is -energy*L*/
     else if (!params.zeta) {
         if (params.ref == 0 || params.ref == 1) {
             global_dpd_->file2_init(&LIA, PSIF_CC_LAMBDA, L_irr, 0, 1, "LIA");

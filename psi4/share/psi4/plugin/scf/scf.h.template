@@ -41,7 +41,7 @@ namespace @plugin@{
 
 class SCF : public Wavefunction {
   public:
-    /// The constuctor
+    /// The constructor
     SCF(SharedWavefunction ref_wfn, Options &options);
     /// The destuctor
     ~SCF();

@@ -1,7 +1,7 @@
 The purpose of this manual is to provide a reasonably detailed
 overview of the source code and programming philosophy of \PSIfour,
 such that programmers interested in contributing to the code will have
-an easier task.  Section \ref{svn} gives a succint explanation of the
+an easier task.  Section \ref{svn} gives a succinct explanation of the
 steps required to obtain the source code from the main repository at
 Virginia Tech.  (Installation instructions are given separately in the
 installation manual or in \$PSI4/INSTALL.) \ref{Style} offers advice on

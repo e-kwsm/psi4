@@ -324,7 +324,7 @@ struct calcinfo {
                               in an MCSCF - CDS 4/15 */
     Dimension dropped_uocc;          /* number of unoccupied orbitals per irrep
                              constrained to be unoccupied and dropped from
-                             explicit consideratin in the CI computation;
+                             explicit considerations in the CI computation;
                              sum of frozen_uocc and rstr_uocc - CDS 4/15 */
     Dimension frozen_uocc;           /* number of frozen unoccupied orbitals per irrep;
                               these are not explicitly present in the CI

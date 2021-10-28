@@ -81,7 +81,7 @@ std::regex integerNumber_("(-?\\d+)", std::regex_constants::icase);
 std::smatch reMatches_;
 
 /**
- * Interprets a string as an integer, throwing if it's unsuccesful.
+ * Interprets a string as an integer, throwing if it's unsuccessful.
  */
 int str_to_int(const std::string &s) {
     int i = 0;
@@ -91,7 +91,7 @@ int str_to_int(const std::string &s) {
 }
 
 /**
- * Interprets a string as an double, throwing if it's unsuccesful.
+ * Interprets a string as an double, throwing if it's unsuccessful.
  */
 double str_to_double(const std::string &s) {
     double d = 0;

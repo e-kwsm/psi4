@@ -80,15 +80,15 @@ struct MOInfo {
     std::vector<int> cc_occ;         /* QT->CC active occupied reordering array */
     std::vector<int> cc_aocc;        /* QT->CC alpha active occupied reordering array */
     std::vector<int> cc_bocc;        /* QT->CC beta active occupied reordering array */
-    std::vector<int> cc_vir;         /* QT->CC active virtiual reordering array */
-    std::vector<int> cc_avir;        /* QT->CC alpha active virtiual reordering array */
-    std::vector<int> cc_bvir;        /* QT->CC beta active virtiual reordering array */
+    std::vector<int> cc_vir;         /* QT->CC active virtual reordering array */
+    std::vector<int> cc_avir;        /* QT->CC alpha active virtual reordering array */
+    std::vector<int> cc_bvir;        /* QT->CC beta active virtual reordering array */
     std::vector<int> qt_occ;         /* CC->QT active occupied reordering array */
     std::vector<int> qt_aocc;        /* CC->QT alpha active occupied reordering array */
     std::vector<int> qt_bocc;        /* CC->QT beta active occupied reordering array */
-    std::vector<int> qt_vir;         /* CC->QT active virtiual reordering array */
-    std::vector<int> qt_avir;        /* CC->QT alpha active virtiual reordering array */
-    std::vector<int> qt_bvir;        /* CC->QT beta active virtiual reordering array */
+    std::vector<int> qt_vir;         /* CC->QT active virtual reordering array */
+    std::vector<int> qt_avir;        /* CC->QT alpha active virtual reordering array */
+    std::vector<int> qt_bvir;        /* CC->QT beta active virtual reordering array */
     double enuc;                     /* Nuclear repulsion energy */
     double escf;                     /* SCF energy from wfn */
     double eref;                     /* Reference energy */

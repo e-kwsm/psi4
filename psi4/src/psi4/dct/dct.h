@@ -560,7 +560,7 @@ class DCTSolver : public Wavefunction {
     std::shared_ptr<BasisSet> primary_;
     /// Number of total primary basis functions
     int nn_;
-    /// Number of total auxilliary basis functions
+    /// Number of total auxiliary basis functions
     int nQ_;
     int nQ_scf_;
     /// Number of alpha occupied orbitals

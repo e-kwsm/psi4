@@ -591,7 +591,7 @@ int read_options(const std::string &name, Options &options, bool suppress_printi
         options.add_bool("MIXED4", true);
 
         /*- Do restrict strings with $e-$ in RAS IV?  Useful to reduce the number
-        of strings required if MIXED4=true, as in a split-virutal CISD[TQ]
+        of strings required if MIXED4=true, as in a split-virtual CISD[TQ]
         computation.  If more than one electron is in RAS IV, then the
         holes in RAS I cannot exceed the number of particles in
         RAS III + RAS IV (i.e., |detci__ex_level|), or else the string is discarded.
@@ -1185,7 +1185,7 @@ int read_options(const std::string &name, Options &options, bool suppress_printi
         options.add_double("CPHF_R_CONVERGENCE", 1E-8);
         /*- Maximum number of iterations for CPHF -*/
         options.add_int("MAXITER", 50);
-        /*- Schwarz screening threshold. Mininum absolute value below which TEI are neglected. -*/
+        /*- Schwarz screening threshold. Minimum absolute value below which TEI are neglected. -*/
         options.add_double("INTS_TOLERANCE", 0.0);
 
         // => ISAPT Zero-th Order Wavefunction Options <= //

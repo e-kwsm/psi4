@@ -48,9 +48,9 @@ namespace psi {
  * @brief contract444_df Forms integrals on the fly from density fitted integrals and contracts them against T
  * amplitudes
  *
- * The integral tensor should arrive packed, in the order (a>=b|Q), where Q is the auxilliary basis index
+ * The integral tensor should arrive packed, in the order (a>=b|Q), where Q is the auxiliary basis index
  *
- * @param B The DF integral tensor, arranged with the auxilliary index as the fast-running index
+ * @param B The DF integral tensor, arranged with the auxiliary index as the fast-running index
  * @param tau1_AO The incoming amplitudes
  * @param tau2_AO The outgoing amplitudes
  * @param alpha The prefactor for the contraction

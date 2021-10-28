@@ -143,7 +143,7 @@ void MOInfo::read_info() {
     }
 
     // Determine the wave function irrep
-    // The defalut irrep is 0 (A)
+    // The default irrep is 0 (A)
     wfn_sym = 0;
     std::string wavefunction_sym_str = options.get_str("WFN_SYM");
     bool wfn_sym_found = false;

@@ -41,7 +41,7 @@ void DFOCC::separable_tpdm() {
 
     if (reference_ == "RESTRICTED") {
         /*
-        // Build J_Q: Already builded in fock.cc
+        // Build J_Q: Already built in fock.cc
         bQooA = std::make_shared<Tensor2d>("DF_BASIS_SCF B (Q|OO)", nQ_ref, noccA * noccA);
         bQooA->read(psio_, PSIF_DFOCC_INTS);
         #pragma omp parallel for

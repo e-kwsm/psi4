@@ -108,7 +108,7 @@ void local_guess() {
         stack[m].value = 1e12;
     }
 
-    /* find the nroot lowest excitations in the non-redunant, orthogonal (bar) space */
+    /* find the nroot lowest excitations in the non-redundant, orthogonal (bar) space */
     for (i = 0; i < nocc; i++) {
         ii = i * nocc + i;
         fii = local.eps_occ[i];

@@ -70,7 +70,7 @@ class Tensor1d {
    public:
     Tensor1d(int d1);
     Tensor1d(std::string name, int d1);
-    Tensor1d();   // default constructer
+    Tensor1d();   // default constructor
     ~Tensor1d();  // destructer
 
     void init(std::string name, int d1);
@@ -150,7 +150,7 @@ class Tensor2d {
     Tensor2d(psi::PSIO &psio, size_t fileno, std::string name, int d1, int d2);
     Tensor2d(std::string name, int d1, int d2, int d3, int d4);
     Tensor2d(std::string name, int d1, int d2, int d3);
-    Tensor2d();   // default constructer
+    Tensor2d();   // default constructor
     ~Tensor2d();  // destructer
 
     void init(std::string name, int d1, int d2);
@@ -539,7 +539,7 @@ class Tensor3d {
    public:
     Tensor3d(int d1, int d2, int d3);
     Tensor3d(std::string name, int d1, int d2, int d3);
-    Tensor3d();   // default constructer
+    Tensor3d();   // default constructor
     ~Tensor3d();  // destructer
 
     void init(std::string name, int d1, int d2, int d3);
@@ -564,7 +564,7 @@ class Tensor1i {
    public:
     Tensor1i(int d1);
     Tensor1i(std::string name, int d1);
-    Tensor1i();   // default constructer
+    Tensor1i();   // default constructor
     ~Tensor1i();  // destructer
 
     void init(std::string name, int d1);
@@ -590,7 +590,7 @@ class Tensor2i {
    public:
     Tensor2i(int d1, int d2);
     Tensor2i(std::string name, int d1, int d2);
-    Tensor2i();   // default constructer
+    Tensor2i();   // default constructor
     ~Tensor2i();  // destructer
 
     void init(std::string name, int d1, int d2);
@@ -632,7 +632,7 @@ class Tensor3i {
    public:
     Tensor3i(int d1, int d2, int d3);
     Tensor3i(std::string name, int d1, int d2, int d3);
-    Tensor3i();   // default constructer
+    Tensor3i();   // default constructor
     ~Tensor3i();  // destructer
 
     void init(std::string name, int d1, int d2, int d3);

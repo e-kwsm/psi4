@@ -159,7 +159,7 @@ key: label by which basis name gets attached to mol's CoordEntry-s
 
 
 
-TODO    check that can just pass stirng instead of options.get_str("BASIS") etc.
+TODO    check that can just pass string instead of options.get_str("BASIS") etc.
         make form fn on the fly. do this in pyconstruct instead of inputparser for ordinary (non-block) basis sets?
 
 //  BasisSet::pyconstruct(mol, key, ?, ?, target)

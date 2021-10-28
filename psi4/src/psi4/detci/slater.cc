@@ -39,7 +39,7 @@ namespace detci {
 /*
 ** calc_orb_diff()
 **
-** Function calculates the differences in the inputed alpha(beta) strings
+** Function calculates the differences in the inputted alpha(beta) strings
 ** and returns whether this difference is in 0, 1, 2, or more spin orbitals
 **
 ** extended  = 0 if strings which differ by > 2 orbitals are not considered

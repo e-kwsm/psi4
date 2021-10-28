@@ -214,14 +214,14 @@ class PSI_API Matrix : public std::enable_shared_from_this<Matrix> {
     Matrix(const std::string& name, int rows, int cols);
 
     /**
-     * Contructs a Matrix from a dpdfile2
+     * Constructs a Matrix from a dpdfile2
      *
      * @param inFile dpdfile2 object to replicate (must already be initialized).
      */
     Matrix(dpdfile2* inFile);
 
     /**
-     * Contructs a Matrix from a dpdbuf4
+     * Constructs a Matrix from a dpdbuf4
      *
      * @param inBuf dpdbuf4 object to replicate (must already be initialized).
      */

@@ -458,7 +458,7 @@ Similar results for 1/x instead of 1/sqrt(x) can be found in
 
 ----------------------------------------------------------------------
 In the case of wavelet approximation, where the wavelets have a certain
-degree of vanishing moments, it is of interest to have an approxmation
+degree of vanishing moments, it is of interest to have an approximation
 of the form
 
 	1/sqrt(x) ~ Polynomal + Exponentialsum.

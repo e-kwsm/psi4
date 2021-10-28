@@ -66,7 +66,7 @@ SAPT: Symmetry-Adapted Perturbation Theory
 .. caution:: August 2021, the number of frozen core orbitals used in the dMP2 computations
    is now standardized. Specifically, we now rigorously enforce that the number of core orbitals 
    frozen in dimer computations is equal to the sum of frozen orbitals of each monomer. Prior to
-   this, a discrepency between these values was possible when one of the monomers was (exclusively) 
+   this, a discrepancy between these values was possible when one of the monomers was (exclusively)
    a charged alkali metal. 
 
 

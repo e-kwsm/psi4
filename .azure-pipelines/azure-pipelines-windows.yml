@@ -118,7 +118,7 @@ jobs:
           conda list
         displayName: "Configure Miniconda"
 
-      # Create conda enviroment
+      # Create conda environment
       # Note: conda activate doesn't work here, because it creates a new shell!
       # Note: c-f eigen has Config.cmake file
       - script: |

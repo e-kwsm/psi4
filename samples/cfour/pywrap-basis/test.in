@@ -15,7 +15,7 @@ H   2.158621  -0.136396   0.809565
 units angstrom
 }
 
-# Auto-fragment function acts on active molecule by default ane returns
+# Auto-fragment function acts on active molecule by default and returns
 #   fragmented molecule which then needs to be activated
 activate(auto_fragments())
 

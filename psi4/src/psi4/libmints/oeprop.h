@@ -98,7 +98,7 @@ class PSI_API Prop {
     void common_init();
 
    public:
-    /// Build a Prop object with C, epsilon, and restricted buit from wfn
+    /// Build a Prop object with C, epsilon, and restricted built from wfn
     Prop(std::shared_ptr<Wavefunction> wfn);
     /// Virtual destructor
     virtual ~Prop();

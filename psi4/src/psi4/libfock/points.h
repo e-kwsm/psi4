@@ -226,7 +226,7 @@ class RKSFunctions : public PointFunctions {
 
     /// Orbital coefficients, AO
     SharedMatrix C_AO_;
-    /// Orbital coefficeints, local AO
+    /// Orbital coefficients, local AO
     SharedMatrix C_local_;
 
    public:

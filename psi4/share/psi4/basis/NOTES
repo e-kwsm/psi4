@@ -323,8 +323,8 @@ Thursday, May 19, 2011 -- LAB
    are related to basis sets made previously in the Karlsruhe group (refs. 7-10), 
    in many cases they are just slightly modified or even unmodified.
    
-   The central idea behind these basis sets is a balanced decription of compounds 
-   (similar errors) all accross the periodic table at each of the three basis set 
+   The central idea behind these basis sets is a balanced description of compounds 
+   (similar errors) all across the periodic table at each of the three basis set 
    levels. This was assessed by treating a large molecular test set (more than 300 
    compounds) representing (nearly) all elements in their common oxidation states. 
    Recommendations for reasonable combinations of bases and methods due to the 
@@ -357,7 +357,7 @@ Wednesday, May 18, 2011 -- LAB
 
 [25]   Regarding item [11], the JKFIT basis sets for Ga-Br in Molpro have since been corrected, so energies should match.
 
-[24]   Regarding item [9], Q-Chem has since corrected their coeffiecients for the RI basis sets.
+[24]   Regarding item [9], Q-Chem has since corrected their coefficients for the RI basis sets.
 
 
 *******************************************************************************

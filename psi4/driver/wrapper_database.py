@@ -111,7 +111,7 @@ def database(name, db_name, **kwargs):
 
         Indicates the type of calculation to be performed on each database
         member. The default performs a single-point ``energy('name')``, while
-        ``optimize`` perfoms a geometry optimization on each reagent, and
+        ``optimize`` performs a geometry optimization on each reagent, and
         ``cbs`` performs a compound single-point energy. If a nested series
         of python functions is intended (see :ref:`sec:intercalls`), use
         keyword ``db_func`` instead of ``func``.
@@ -227,7 +227,7 @@ def database(name, db_name, **kwargs):
     kwargs['db_func'] = func
     # Bounce to CP if bsse kwarg (someday)
     if kwargs.get('bsse_type', None) is not None:
-        raise ValidationError("""Database: Cannot specify bsse_type for database. Use the cp keyword withing database instead.""")
+        raise ValidationError("""Database: Cannot specify bsse_type for database. Use the cp keyword within database instead.""")
 
     allowoptexceeded = kwargs.get('allowoptexceeded', False)
     optstash = p4util.OptionsState(

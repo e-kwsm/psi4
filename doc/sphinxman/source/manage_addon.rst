@@ -63,7 +63,7 @@ How to use an Add-On's name in directory structure, build, and distribution
   ``v2rdm_casscf::v2rdm_casscf``.
 
 * Following the CMake project name (though not restricted to it --
-  |PSIfour| managment could change the pattern), the user flag to enable
+  |PSIfour| management could change the pattern), the user flag to enable
   an add-on is :samp:`ENABLE_{AddOn_name}`. Note that runtime-only
   add-ons don't go through this enabling process.
 
@@ -319,7 +319,7 @@ A few guidelines for standardizing option names among modules.
 * ``LOCAL`` (not localize).
 
 * Use ``AO`` and ``MO`` for atomic and molecular orbitals. When 'O' for
-  orbitals is too obsure or would make for too short a keyword, as in
+  orbitals is too obscure or would make for too short a keyword, as in
   "bool NO" for "Do use natural orbitals", use ``ORBS`` for orbitals. So
   natural orbitals are ``NAT_ORBS`` and Brueckner orbitals are
   ``BRUECKNER_ORBS``.

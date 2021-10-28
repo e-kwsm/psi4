@@ -95,7 +95,7 @@ class PSI_API CorrelationTable {
     /// Returns the lower order point group.
     std::shared_ptr<PointGroup> subgroup() const { return subgroup_; }
 
-    /** Initalize the correlation table.  Returns 0 for success and nonzero
+    /** Initialize the correlation table.  Returns 0 for success and nonzero
         for failure.  This will fail if the subgroup is not really a subgroup
         of group. */
     int initialize_table(const std::shared_ptr<PointGroup>& group, const std::shared_ptr<PointGroup>& subgroup);

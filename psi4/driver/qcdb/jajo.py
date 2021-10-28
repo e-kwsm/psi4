@@ -391,7 +391,7 @@ def getrec(reclabelarray, verbose=False):
         "ABELSTGP": 'CHARACTER',
         "REALCHRG": 'INTEGER',      # atom/mol? charge taking into acct edp
         "NSOSCF  ": 'INTEGER',      # whether is spin orbital calc?
-        "SCFVCFLA": 'DOUBLE',       # scf vector expanded from sph to cart basis for symm anal - determin orb sym
+        "SCFVCFLA": 'DOUBLE',       # scf vector expanded from sph to cart basis for symm anal - determine orb sym
         "EFG_SYM1": 'INTEGER',       # symmetry property of components of electric field gradient  integrals
         "EFG_SYM2": 'INTEGER',       # symm prop of comp of EFG
 

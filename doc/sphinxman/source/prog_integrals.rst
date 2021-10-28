@@ -38,7 +38,7 @@ Introduction
 ------------
 
 |PSIfour| has a number of backends available to compute integrals. In order to
-accomodate these options, while providing a clean interface to the programmer,
+accommodate these options, while providing a clean interface to the programmer,
 an abstraction layer is implemented within Libmints.  A recent upgrade to the
 primary integral engine has seen some important changes to the way this
 interface layer is used; this document is designed to aid new developers as
@@ -89,7 +89,7 @@ The new syntax
 
 The newer integral engines being interfaced to |PSIfour| may or may not require
 a group of similar integrals to be computed together in a block using
-vectorized instructions.  To accomodate this possibility, a new syntax has been
+vectorized instructions.  To accommodate this possibility, a new syntax has been
 introduced in Libmints:
 
 .. code-block:: cpp
@@ -196,7 +196,7 @@ object's ``update_density`` member, passing it a SharedMatrix holding the
 current density (remember that it changes during each iteration of the SCF) and
 the product will be considered during screening.  If only coulomb-like terms
 are to be computed, the ``needs_exchange`` argument to the integral object
-constructor should be set to false, otherwise it should be true to correcly
+constructor should be set to false, otherwise it should be true to correctly
 account for products of the density and integrals that contribute to
 exchange-like terms.
 

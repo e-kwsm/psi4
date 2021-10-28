@@ -92,7 +92,7 @@ void get_frozen() {
     psio_read_entry(PSIF_CC_INFO, "All Occ Orb Symmetry", (char *)frozen.occ_sym, sizeof(int) * moinfo.nmo);
     psio_read_entry(PSIF_CC_INFO, "All Virt Orb Symmetry", (char *)frozen.vir_sym, sizeof(int) * moinfo.nmo);
 
-    /* Get full orbtial list offset arrays for occupied and virtual */
+    /* Get full orbital list offset arrays for occupied and virtual */
     frozen.occ_off = init_int_array(moinfo.nirreps);
     frozen.vir_off = init_int_array(moinfo.nirreps);
     psio_read_entry(PSIF_CC_INFO, "All Occ Orb Offsets", (char *)frozen.occ_off, sizeof(int) * moinfo.nirreps);
