@@ -1659,7 +1659,7 @@ static void handle_reordering12(PermutedOrder permutation, Libderiv_t &libderiv_
  * @param am Total angular momentum of this quartet
  * @param sh1eqsh2 Is the shell on center 1 identical to that on center 2?
  * @param sh3eqsh4 Is the shell on center 3 identical to that on center 4?
- * @param deriv_lvl Derivitive level of the integral
+ * @param deriv_lvl Derivative level of the integral
  * @return The total number of primitive combinations found. This is passed to libint/libderiv.
  */
 static size_t fill_primitive_data(prim_data *PrimQuartet, Fjt *fjt, const L1ShellPair &sp12, const L1ShellPair &sp34,

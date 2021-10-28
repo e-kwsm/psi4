@@ -145,7 +145,7 @@ class PSI_API SOBasisSet {
     std::vector<SOTransform> sotrans_;
     std::vector<AOTransform> aotrans_;
 
-    //! vector of so shells numbers sorted in acending AM order.
+    //! vector of so shells numbers sorted in ascending AM order.
     std::vector<int> sorted_so_shell_list_;
 
     /// Handles initializing SOBasis

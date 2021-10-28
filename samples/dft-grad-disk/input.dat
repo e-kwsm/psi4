@@ -1,4 +1,4 @@
-#! A range-seperated gradient for SO2 to test disk algorithms by explicitly setting low memory 
+#! A range-separated gradient for SO2 to test disk algorithms by explicitly setting low memory
 
 core.set_memory_bytes(int(2.e6))
 

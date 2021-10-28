@@ -85,7 +85,7 @@ class BasisSet;
  *     const std::vector<long int> >& MN_reverse = sieve->shell_pairs_reverse();
  *     int MNreduced = MN_reverse[MNindex];
  *     if (MNreduced < 0) {
- *         // The shell pair is not signficant
+ *         // The shell pair is not significant
  *     } else {
  *         // The shell pair is the MNreduced significant shell pair
  *     }

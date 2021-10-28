@@ -43,7 +43,7 @@ class Hamiltonian;
 
 /**
  *  @class Updater
- *  @brief Containts the procedure for updating the amplitudes
+ *  @brief Contains the procedure for updating the amplitudes
  */
 class Updater {
    public:

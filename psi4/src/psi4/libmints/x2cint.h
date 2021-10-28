@@ -90,7 +90,7 @@ class PSI_API X2CInt {
     std::shared_ptr<MatrixFactory> soFactory_;
     /// Dimension of the orbital basis
     Dimension nsopi_;
-    /// Dimension of the constracted orbital basis
+    /// Dimension of the constructed orbital basis
     Dimension nsopi_contracted_;
 
     // Matrices in the orbital basis

@@ -28,7 +28,7 @@
 
 /*
  *
- Dx_read.cc Code modifed by Kevin Hannon
+ Dx_read.cc Code modified by Kevin Hannon
 11/13/2012
  */
 

@@ -378,7 +378,7 @@ void DFOCC::get_moinfo() {
 }  // end get_moinfo
 
 //======================================================================
-//      MO COEFFIENT BLOCKS
+//      MO COEFFICIENT BLOCKS
 //======================================================================
 void DFOCC::mo_coeff_blocks() {
     // RHF

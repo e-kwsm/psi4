@@ -9,5 +9,5 @@ General Notes About the Code
    * Computing all energy contributions involving frozen core orbitals only and putting that
      result into frozen_core_energy_. Used to sanity-check the HF energy.
    * Constructing the "frozen-core operator", which is the core hamiltonian for non-frozen orbitals
-     plus the Couloumb and exchange contributions terms arising from the electric field of
+     plus the Coulomb and exchange contributions terms arising from the electric field of
      the frozen core orbitals. Think of it as halfway between the core Hamiltonian and the Fock operator.

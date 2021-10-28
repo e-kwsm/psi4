@@ -728,7 +728,7 @@ void DLPNOMP2::compute_df_ints() {
         auto C_pao_slice = submatrix_rows_and_cols(*C_pao_, riatom_to_bfs2_[centerQ], riatom_to_paos_ext_[centerQ]);
 
         //// Here we'll refit the coefficients of C_lmo_slice to minimize residual from unscreened orbitals
-        //// This lets us get away with agressive coefficient screening
+        //// This lets us get away with aggressive coefficient screening
         //// Boughton and Pulay 1992 JCC, Equation 3
 
         // Solve for C_lmo_slice such that S[local,local] @ C_lmo_slice ~= S[local,all] @ C_lmo_
