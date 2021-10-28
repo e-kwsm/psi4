@@ -54,7 +54,7 @@ int CCBLAS::parse(std::string& str) {
 
     // Store the A Matrix
     CCMatrix* A_Matrix = get_Matrix(split_str[0], str);
-    // Check the assigment operator
+    // Check the assignment operator
     std::string assignment(split_str[1]);
     strvec::iterator strveciter(find(allowed_assignments.begin(), allowed_assignments.end(), assignment));
     if (strveciter == allowed_assignments.end())

@@ -42,7 +42,7 @@ class IntegralFactory;
  *
  * Describes an orbital space. Contains a unique identifier that can be used to
  * describe the space. Also contains shared_ptr references to AO->MO transformation
- * matrix and possible orbital energies. Relavent basis set and integral factory
+ * matrix and possible orbital energies. Relevant basis set and integral factory
  * are also contained.
  */
 class PSI_API OrbitalSpace {

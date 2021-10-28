@@ -80,14 +80,14 @@ class CCManyBody {
     void make_fock_matrix();
     void make_denominators();
     void print_method(const char* text);
-    virtual double compute_energy() { throw PSIEXCEPTION("CCManyBody::compute_energy must be overriden."); };
+    virtual double compute_energy() { throw PSIEXCEPTION("CCManyBody::compute_energy must be overridden."); };
     //  void        zero_internal_amps();
     //  void        zero_t1_internal_amps();
     //  void        zero_internal_delta_amps();
    protected:
     Options& options_;
     std::shared_ptr<PSIMRCCWfn> wfn_;
-    // Effective Hamiltonian and the correpsonding eigenvectors
+    // Effective Hamiltonian and the corresponding eigenvectors
     void print_eigensystem(int ndets, double** Heff, std::vector<double>& eigenvector);
     double diagonalize_Heff(int root, int ndets, double** Heff, std::vector<double>& right_eigenvector,
                             std::vector<double>& left_eigenvector, bool initial);
@@ -101,7 +101,7 @@ class CCManyBody {
     double** Heff;
     double** Heff_mrpt2;
 
-    // Effective Hamiltonian and the correpsonding eigenvectors
+    // Effective Hamiltonian and the corresponding eigenvectors
     double current_energy;
     double delta_energy;
     double cas_energy;

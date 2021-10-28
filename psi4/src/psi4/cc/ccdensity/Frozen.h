@@ -61,11 +61,11 @@ struct Frozen {
     int *avir_off;  /* virtual alpha orbital offsets within each irrep */
     int *bvir_off;  /* virtual beta orbital offsets within each irrep */
     int *allcc_occ; /* QT->CC occupied reordering array */
-    int *allcc_vir; /* QT->CC virtiual reordering array */
+    int *allcc_vir; /* QT->CC virtual reordering array */
     int *qt_occ;    /* CC->QT occupied reordering array */
-    int *qt_vir;    /* CC->QT virtiual reordering array */
+    int *qt_vir;    /* CC->QT virtual reordering array */
     int *cc_occ;    /* QT->CC active occupied reordering array */
-    int *cc_vir;    /* QT->CC active virtiual reordering array */
+    int *cc_vir;    /* QT->CC active virtual reordering array */
     int *occ;       /* boolean array for occ. orbs. */
     int *vir;       /* boolean array for virt. orbs. */
     int *socc;      /* boolean array for socc. orbs. */

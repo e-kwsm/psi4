@@ -56,11 +56,11 @@ namespace ccdensity {
    Hbar connected to R and to S,D.  The exceptions are that we keep
    <ij||ab> in xi_2 and Fia in xi_1.  See below.
 
-   The new terms may be beautifully evaluted by:
+   The new terms may be beautifully evaluated by:
      xi_1 +=  (E <0|L|D><D|R|S>) => E*<Limae|Rme> minus all the diagrams
         of <0|L Hbar R|S> where Hbar is not connected to S and R.
 
-   We do _not_ substract <Lme|Rme> Fia, because this term adds to the
+   We do _not_ subtract <Lme|Rme> Fia, because this term adds to the
    normal xi_1 term <Lmnef|Rmnef> to make (1)Fia.  This constant term
    (along with <ij||ab> in xi_2) causes cclambda to solve the ground-state
    lambda equations implicitly at the same time as zeta.

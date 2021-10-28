@@ -104,7 +104,7 @@ the following code will do that::
         psi4_io.set_default_path(scratch_dir + '/')
 
 Individual files can be sent to specific locations.  For example, file 12
-contains information about the internal coordiantes of a geometry optimization.
+contains information about the internal coordinates of a geometry optimization.
 The user may want to retain this in the working directory
 (*i.e.*, where |PSIfour| was launched from) to analyze the optimization.  This is
 accomplished by the commands below::

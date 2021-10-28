@@ -52,7 +52,7 @@ class Array1d {
    public:
     Array1d(int d1);
     Array1d(std::string name, int d1);
-    Array1d();   // default constructer
+    Array1d();   // default constructor
     ~Array1d();  // destructer
 
     Array1d* generate(int d1);
@@ -105,7 +105,7 @@ class Array2d {
    public:
     Array2d(int d1, int d2);
     Array2d(std::string name, int d1, int d2);
-    Array2d();   // default constructer
+    Array2d();   // default constructor
     ~Array2d();  // destructer
 
     Array2d* generate(int d1, int d2);
@@ -155,7 +155,7 @@ class Array3d {
    public:
     Array3d(int d1, int d2, int d3);
     Array3d(std::string name, int d1, int d2, int d3);
-    Array3d();   // default constructer
+    Array3d();   // default constructor
     ~Array3d();  // destructer
 
     Array3d* generate(int d1, int d2, int d3);
@@ -182,7 +182,7 @@ class Array1i {
    public:
     Array1i(int d1);
     Array1i(std::string name, int d1);
-    Array1i();   // default constructer
+    Array1i();   // default constructor
     ~Array1i();  // destructer
 
     Array1i* generate(int d1);
@@ -210,7 +210,7 @@ class Array3i {
    public:
     Array3i(int d1, int d2, int d3);
     Array3i(std::string name, int d1, int d2, int d3);
-    Array3i();   // default constructer
+    Array3i();   // default constructor
     ~Array3i();  // destructer
 
     Array3i* generate(int d1, int d2, int d3);

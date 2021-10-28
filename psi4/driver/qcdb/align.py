@@ -77,7 +77,7 @@ def B787(cgeom,
         Whether ref_mol and concern_mol have identical geometries by eye
         (barring orientation or atom mapping) and expected final RMSD = 0.
         If `True`, procedure is truncated when RMSD condition met, saving time.
-        If float, convcrit at which search for minimium truncates.
+        If float, convcrit at which search for minimum truncates.
     run_to_completion : bool, optional
         Run reorderings to completion (past RMSD = 0) even if unnecessary because
         `mols_align=True`. Used to test worst-case timings.

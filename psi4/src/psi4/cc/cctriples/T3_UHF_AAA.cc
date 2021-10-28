@@ -100,7 +100,7 @@
 **   needed for CC3 EOM
 **
 ** TDC, July 2004
-** Modified to return disconnected triples, TDC, Feburary 2008
+** Modified to return disconnected triples, TDC, February 2008
 */
 
 #include <cstdio>

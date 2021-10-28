@@ -281,7 +281,7 @@ void SOMCSCF::update(SharedMatrix Cocc, SharedMatrix Cact, SharedMatrix Cvir, Sh
     }
     // matrices_["Fock"]->print();
 
-    // => Orbtial Gradient <= //
+    // => Orbital Gradient <= //
     matrices_["Gradient"] = std::make_shared<Matrix>("Gradient", nirrep_, noapi_, navpi_);
     for (int h = 0; h < nirrep_; h++) {
         if (!noapi_[h] || !navpi_[h]) continue;

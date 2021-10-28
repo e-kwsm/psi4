@@ -232,7 +232,7 @@ void CUHF::form_F() {
         Dp_->print();
     }
 
-    // Transfrom to the orthonormal basis
+    // Transform to the orthonormal basis
     Dp_->transform(S_);
     Dp_->transform(X_);
     if (debug_) {

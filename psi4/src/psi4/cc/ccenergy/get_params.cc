@@ -124,7 +124,7 @@ void CCEnergyWavefunction::get_params(Options &options) {
     else
         throw PsiException("Error in input: invalid CACHETYPE", __FILE__, __LINE__);
 
-    if (params_.ref == 2) /* No LOW cacheing yet for UHF references */
+    if (params_.ref == 2) /* No LOW caching yet for UHF references */
         params_.cachetype = 0;
 
     params_.nthreads = Process::environment.get_n_threads();
