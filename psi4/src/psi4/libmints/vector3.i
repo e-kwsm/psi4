@@ -113,7 +113,7 @@ inline Vector3 Vector3::perp_unit(const Vector3& v) const {
             result[2] = 0.0;
             return result;
         } else {
-            // choose a vector prependicular to d
+            // choose a vector perpendicular to d
             // choose it in one of the planes xy, xz, yz
             // choose the plane to be that which contains the two largest
             // components of d

@@ -295,7 +295,7 @@ Tweak Conda for postrelease
 ---------------------------
 
 * Start a PR to https://github.com/conda-forge/psi4-feedstock . Always store the PR branch on your
-  fork, never on the conda-forge feedstock (or your branch itself will get publically packaged).
+  fork, never on the conda-forge feedstock (or your branch itself will get publicly packaged).
   https://github.com/conda-forge/psi4-feedstock/pull/15 is an example.
 
   - Always: edit ``version`` and ``commit`` jinja variables.

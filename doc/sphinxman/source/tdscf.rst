@@ -104,7 +104,7 @@ This will seek to converge 10 singlet roots from a restricted Hartree--Fock refe
       HamiltonianSolver iter   4:   2.34146e-06  7.75689e-04    100
       HamiltonianSolver iter   5:   1.75483e-08  6.17293e-05    120      Converged
 
-When convergence is reached, |PSIfour| will output a report of excitation energies, oscillator strengths, and rotatory strenghts in atomic units::
+When convergence is reached, |PSIfour| will output a report of excitation energies, oscillator strengths, and rotatory strengths in atomic units::
 
 
                                          Excitation Energy         Total Energy        Oscillator Strength             Rotatory Strength

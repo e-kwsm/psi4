@@ -54,7 +54,7 @@ if d3_engine == "dftd3":
 
 #hasD3M = False  # temporary until fctl released into superfunctionals list
 # why have the hasD3M switch, you ask? why not just try catch throughout to
-#   accomodate old and new dftd3 exe? the answer is we can't catch from c-side.
+#   accommodate old and new dftd3 exe? the answer is we can't catch from c-side.
 
 # <<<  Part 2  >>>
 

@@ -65,7 +65,7 @@ def expand_saveas(saveas, def_filename, def_path=os.path.abspath(os.curdir), def
 
 def segment_color(argcolor, saptcolor):
     """Find appropriate color expression between overall color directive
-    *argcolor* and particular color availibility *rxncolor*.
+    *argcolor* and particular color availability *rxncolor*.
 
     """
     import matplotlib
