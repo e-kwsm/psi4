@@ -54,7 +54,7 @@
  *  DELETE THIS FILE IF YOU WANT.  IT SHOULD HAVE BEEN  PUSHED PREVIOUSLY, BUT THAT WOULD
  *  NOT APPEAR TO BE THE CASE SINCE WHEN I PULLED CHANGES, IT SAID I HAD AN UNTRACKED
  *  FILE THAT WAS THE SCATTER.CC FILE.  SO HERE IT IS AS AN ALTERNATE PRESENTATION OF THE FILE
- *  THAT IS COMPLETELY UNECESSARY, BUT MAYBE HELPFUL.
+ *  THAT IS COMPLETELY UNNECESSARY, BUT MAYBE HELPFUL.
  *
  *  -HM
  */
@@ -77,7 +77,7 @@ void scatter2() {
 
     //* Adapt TDC's roa.c Code
     /*
-     *  This will involve aquiring other pieces of needed data (like the reference geomertry
+     *  This will involve acquiring other pieces of needed data (like the reference geomertry
      *  number of atoms, etc) using PSI4 style objects, probably.
      *
      *  Also, the Hessian matrix and dipole moment derivatives are needed as well,

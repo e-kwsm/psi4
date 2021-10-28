@@ -67,7 +67,7 @@ class PSI_API ExternalPotential {
     SharedMatrix gradient_on_charges_;
 
    public:
-    /// Constructur, does nothing
+    /// Constructor, does nothing
     ExternalPotential();
     /// Destructor, does nothing
     ~ExternalPotential();

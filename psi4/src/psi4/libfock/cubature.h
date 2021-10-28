@@ -162,7 +162,7 @@ class MolecularGrid {
     int npoints() const { return npoints_; }
     /// Maximum number of grid points in a block
     int max_points() const { return max_points_; }
-    /// Maximum number of funtions in a block
+    /// Maximum number of functions in a block
     int max_functions() const { return max_functions_; }
     /// Total collocation size of all blocks
     size_t collocation_size() { return collocation_size_; }

@@ -87,7 +87,7 @@ Installation
 
      >>> git clone https://github.com/DEShawResearch/sns-mp2
 
-* Once dowloaded, the plugin can be installed as outlined in the documentation:
+* Once downloaded, the plugin can be installed as outlined in the documentation:
 
   .. code-block:: bash
 

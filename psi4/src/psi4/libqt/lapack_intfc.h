@@ -189,7 +189,7 @@ int C_DGESV(int n, int nrhs, double *a, int lda, int *ipiv, double *b, int ldb) 
 ** triangular (upper trapezoidal if nrow < ncol).
 **
 ** \param nrow = number of rows
-** \param ncol = number of colums
+** \param ncol = number of columns
 ** \param a    = matrix to factorize
 ** \param lda  = leading dimension of a, lda >= max(1,ncol)
 ** \param ipiv = output integer array of the pivot indices; for 1 <= i <=
@@ -248,7 +248,7 @@ int C_DPOTRF(char uplo, int n, double *A, int lda) {
 ** \param n     = order of the matrix a.  n >= 0.
 ** \param a     = array of dimension (n,lda).  On entry, the factors L and U
 **                from the factorization A = P*L*U as computed by DGETRF.
-**                On exit, if info=0, the inverse of hte original matrix A.
+**                On exit, if info=0, the inverse of the original matrix A.
 ** \param lda   = the leading dimension of the array a.  lda >= max(1,n).
 ** \param ipiv  = The pivot indices from DGETRF.  For 1<=i<=n, row i of the
 **                matrix was interchanged with row ipiv(i)
@@ -405,7 +405,7 @@ int C_DPOTRS(char uplo, int n, int nrhs, double *A, int lda, double *B, int ldb)
 **                 If info = -i, the i-th argument had an illegal value.
 **                 If info > 0,  Related to failure in the convergence of
 **                 the upper bidiagonal matrix B.  See the LAPACK
-**                 manual for additiona information.
+**                 manual for additional information.
 **
 ** Interface written by TDC, July 2001, updated April 2004
 ** \ingroup QT

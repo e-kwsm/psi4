@@ -185,7 +185,7 @@ void x_xi1_rohf() {
 
     /* When (connect_xi), we still include the following term, even though Hbar
        is not connected to R.  The <Rmnef|Lmnef> Fia term here along with the
-       <Rme|Lme> Fia term which is _not_ substracted out in xi_connected add up
+       <Rme|Lme> Fia term which is _not_ subtracted out in xi_connected add up
        to (1)*Fia.  This constant term causes cclambda to be solving the
        ground-state lambda equations implicitly as well. */
     global_dpd_->file2_init(&XIA, PSIF_EOM_XI, G_irr, 0, 1, "XIA");

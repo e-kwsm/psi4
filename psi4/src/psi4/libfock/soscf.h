@@ -231,7 +231,7 @@ class SOMCSCF {
     Dimension nmopi_;
     Dimension nsopi_;
 
-    // Non-redunant rotatations
+    // Non-redundant rotatations
     Dimension noapi_;
     Dimension navpi_;
 

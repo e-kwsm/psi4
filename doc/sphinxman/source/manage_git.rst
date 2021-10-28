@@ -288,7 +288,7 @@ How to locate non-ascii characters in the codebase
 --------------------------------------------------
 
 Neither the Python interpreter nor Sphinx like non-ASCII characters one
-bit, though the errors may be intermittant. Output files are usually ok,
+bit, though the errors may be intermittent. Output files are usually ok,
 so Jerome can live, for now. To aid in tracking down offenders, here's
 the ``vi`` and ``grep`` search strings. In the docs, you want to use
 the substitutions in :source:`doc/sphinxman/source/abbr_accents.rst`

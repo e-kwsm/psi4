@@ -137,7 +137,7 @@ void DCTSolver::transform_integrals_RHF() {
 
     // The integral transformation object also provided us with the Fock matrix
     // in the current basis, from which we can get the new denominator matrices.
-    // N.B. These are not neccesarily the eigenvalues, rather they are the diagonal
+    // N.B. These are not necessarily the eigenvalues, rather they are the diagonal
     // elements of F0 in the current basis; F is diagonal, not F0.
     build_denominators_RHF();
 

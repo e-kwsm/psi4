@@ -571,7 +571,7 @@ void export_mints(py::module& m) {
         .def("add", matrix_set4(&Matrix::add), "Increments row m and column n of irrep h's block matrix by val.", "h"_a,
              "m"_a, "n"_a, "val"_a)
         .def("axpy", &Matrix::axpy, "Add to this matrix another matrix scaled by a", "a"_a, "X"_a)
-        .def("subtract", matrix_one(&Matrix::subtract), "Substract a matrix from this matrix")
+        .def("subtract", matrix_one(&Matrix::subtract), "Subtract a matrix from this matrix")
         .def("accumulate_product", matrix_two(&Matrix::accumulate_product),
              "Multiplies two arguments and adds the result to this matrix")
         .def("scale", &Matrix::scale, "Scales the matrix by the floating point value a", "a"_a)
@@ -657,7 +657,7 @@ void export_mints(py::module& m) {
         .def("load", matrix_load_psio2(&Matrix::load),
              "Load a matrix from a PSIO object from fileno and with toc position of the name of the matrix", "psio"_a,
              "fileno"_a, "savetype"_a = Matrix::SaveType::LowerTriangle)
-        // should this take Petite List's sotoao() function as a default transfomer argument? has to be set C++ side
+        // should this take Petite List's sotoao() function as a default transformer argument? has to be set C++ side
         // first i think
         .def("remove_symmetry", &Matrix::remove_symmetry, "Remove symmetry from a matrix A with PetiteList::sotoao()",
              "a"_a, "transformer"_a)
@@ -1026,7 +1026,7 @@ void export_mints(py::module& m) {
         .def("symmetrize", &Molecule::symmetrize_to_abelian_group,
              "Finds the highest point Abelian point group within the specified tolerance, and "
              "forces the geometry to have that symmetry.")
-        .def("inertia_tensor", &Molecule::inertia_tensor, "Returns intertial tensor")
+        .def("inertia_tensor", &Molecule::inertia_tensor, "Returns inertial tensor")
         .def("is_variable", &Molecule::is_variable, "Checks if variable arg0 is in the structural variables list")
         .def("set_variable", &Molecule::set_variable,
              "Sets the value arg1 to the variable arg0 in the list of structure variables, then "
@@ -1557,7 +1557,7 @@ void export_mints(py::module& m) {
         .def("mo_f12_double_commutator", &MintsHelper::mo_f12_double_commutator, "MO F12 double commutator integrals",
              "corr"_a, "C1"_a, "C2"_a, "C3"_a, "C4"_a)
         .def("mo_spin_eri", &MintsHelper::mo_spin_eri, "Symmetric MO Spin ERI Integrals", "C1"_a, "C2"_a)
-        .def("mo_transform", &MintsHelper::mo_transform, "N^5 ao to mo transfrom, in memory", "Iso"_a, "C1"_a, "C2"_a,
+        .def("mo_transform", &MintsHelper::mo_transform, "N^5 ao to mo transform, in memory", "Iso"_a, "C1"_a, "C2"_a,
              "C3"_a, "C4"_a)
         .def("set_basisset", &MintsHelper::set_basisset, "Sets a basis set", "label"_a, "basis"_a)
         .def("play", &MintsHelper::play, "play function")

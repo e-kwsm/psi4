@@ -107,7 +107,7 @@ to |PSIfour|::
 
 Please note that memory can be specified both in IEC binary units (1 KiB = 1024 bytes) and SI units (1 kB = 1000 bytes). |PSIfour| recognizes and obeys both of them correctly. The units are not case sensitive (Kb and KB are equivalent to kB).
 
-By default, |PSIfour| performs a "sanity check" when parsing Psithon input files, enforcing a minimum memory requirement of 250 MiB. While it is generally not recomennded to do so, expert users can bypass this check by directly setting the number of bytes availble to |PSIfour|::
+By default, |PSIfour| performs a "sanity check" when parsing Psithon input files, enforcing a minimum memory requirement of 250 MiB. While it is generally not recomennded to do so, expert users can bypass this check by directly setting the number of bytes available to |PSIfour|::
 
     # setting available memory to 2 MB
     set_memory_bytes(2000000)

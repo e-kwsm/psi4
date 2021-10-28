@@ -2435,7 +2435,7 @@ std::shared_ptr<Matrix> RSCFDeriv::hessian_response() {
     return response;
 }
 
-// Basically copy/paste the rhf function, split into spin compnents
+// Basically copy/paste the rhf function, split into spin components
 std::shared_ptr<Matrix> USCFDeriv::hessian_response()
 {
     // => Control Parameters <= //

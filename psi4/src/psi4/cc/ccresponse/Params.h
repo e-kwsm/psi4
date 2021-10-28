@@ -40,7 +40,7 @@ namespace ccresponse {
 struct Params {
     int print;          /* Output level control */
     long int memory;    /* Memory available (in bytes) */
-    int cachelev;       /* cacheing level for libdpd */
+    int cachelev;       /* caching level for libdpd */
     int ref;            /* reference determinant (0=RHF, 1=ROHF, 2=UHF) */
     double *omega;      /* energy of applied field (a.u) for dynamic polarizabilities */
     int nomega;         /* number of field energies desired */
@@ -49,7 +49,7 @@ struct Params {
     int restart;        /* boolean for allowing a restart from on-disk amps */
     int diis;           /* boolean for using DIIS extrapolation */
     std::string prop;   /* user-selected property */
-    int local;          /* boolean for simluation of local correlation */
+    int local;          /* boolean for simulation of local correlation */
     int analyze;
     int dertype;
     std::string gauge; /* choice of gauge for optical rotation */

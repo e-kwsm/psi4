@@ -68,7 +68,7 @@ SharedWavefunction @plugin@(SharedWavefunction ref_wfn, Options &options)
         throw PSIEXCEPTION("\nThis plugin template requires C1 symmetry.\n");
     }
 
-    // Need the molecule to contruct the auxiliary basis set
+    // Need the molecule to construct the auxiliary basis set
     std::shared_ptr<Molecule> molecule = ref_wfn->molecule();
 
     // Obtain basis set objects

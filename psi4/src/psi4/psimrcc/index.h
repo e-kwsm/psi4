@@ -84,7 +84,7 @@ class CCIndex {
     ///////////////////////////////////////////////////////////////////////////////
     // Print routines
     void print();
-    // Get the numeber of tuples and the numeber of indices per tuple
+    // Get the number of tuples and the number of indices per tuple
     int get_ntuples() { return (ntuples); }
     int get_nelements() { return (nelements); }
     std::string get_label() { return (label); }

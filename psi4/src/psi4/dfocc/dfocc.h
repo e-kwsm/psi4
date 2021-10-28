@@ -686,9 +686,9 @@ class DFOCC : public Wavefunction {
     int ntri_anti_ijBB;
     int ntri_anti_abAA;
     int ntri_anti_abBB;
-    int nQ;        // numer of aux-basis
-    int nQ_ref;    // numer of aux-basis for DF_BASIS_SCF
-    int nQ_cd;     // numer of aux-basis functions for LDL
+    int nQ;        // number of aux-basis
+    int nQ_ref;    // number of aux-basis for DF_BASIS_SCF
+    int nQ_cd;     // number of aux-basis functions for LDL
     int nso2_;     // nso * nso
     int naocc2AA;  // # of active OO pairs
     int naocc2AB;  // # of active OO pairs

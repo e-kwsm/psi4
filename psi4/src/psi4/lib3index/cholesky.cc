@@ -128,7 +128,7 @@ void Cholesky::choleskify() {
 
         Q_++;
     }
-    // Copy into a more permanant Matrix object
+    // Copy into a more permanent Matrix object
     L_ = std::make_shared<Matrix>("Partial Cholesky", Q_, n);
     double** Lp = L_->pointer();
 

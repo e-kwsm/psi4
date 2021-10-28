@@ -133,7 +133,7 @@ module generically like ``energy('detci')``.  The latter approach
 will also work for any of the previously-mentioned CI wavefunctions for
 which the driver has built-in shortcuts, so long as the relevant options
 (especially |detci__ex_level|) are set appropriately.  Some
-examples of single-refence CI, RASCI, and full CI computations are provided
+examples of single-reference CI, RASCI, and full CI computations are provided
 in :source:`samples`.
 
 .. _`table:ci_spaces`:

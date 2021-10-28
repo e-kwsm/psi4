@@ -1,4 +1,4 @@
-#! DFT Functional Test for Range-Seperated Hybrids and Ghost atoms
+#! DFT Functional Test for Range-Separated Hybrids and Ghost atoms
 
 molecule water {
 @O     -0.031788188689    -0.057762343755    -2.500000000000

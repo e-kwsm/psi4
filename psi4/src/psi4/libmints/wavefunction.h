@@ -257,7 +257,7 @@ class PSI_API Wavefunction : public std::enable_shared_from_this<Wavefunction> {
     // wave function. For F/I-SAPT, we need a set of external potential that can be assigned to either the interacting
     // fragments or to the environment
     // For F/I-SAPT the keys can be A, B, or C (all optionals), where A and B signify the interacting subsystem
-    // and C signify the envirnoment
+    // and C signify the environment
     std::map<std::string, std::shared_ptr<ExternalPotential>> potentials_;
 
     // Polarizable continuum model

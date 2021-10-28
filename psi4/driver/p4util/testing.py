@@ -190,7 +190,7 @@ def _mergedapis_compare_wavefunctions(expected, computed, *args, **kwargs):
 
 
 def _psi4_true_raise_handler(passfail, label, message, return_message=False, quiet=False):
-    """Handle comparison result by printing to screen, printing to Psi output file, raising TestComparisonError, and (incidently) returning."""
+    """Handle comparison result by printing to screen, printing to Psi output file, raising TestComparisonError, and (incidentally) returning."""
 
     width = 86
     if passfail:
@@ -235,7 +235,7 @@ _psi4_style_doc = """
         Absolute tolerance (see formula in :py:func:`qcelemental.testing.compare_values` notes).
         Values less than one are taken literally; one or greater taken as decimal digits for comparison.
         So `1` means `atol=0.1` and `2` means `atol=0.01` but `0.04` means `atol=0.04`
-        Note that the largest expressable processed atol will be `~0.99`.
+        Note that the largest expressible processed atol will be `~0.99`.
 
 """
 

@@ -500,7 +500,7 @@ double ROHF::compute_E() {
 
 void ROHF::Hx(SharedMatrix x, SharedMatrix ret) {
     if (functional_->needs_xc()) {
-        throw PSIEXCEPTION("SCF: Cannot yet compute DFT Hessian-vector prodcuts.\n");
+        throw PSIEXCEPTION("SCF: Cannot yet compute DFT Hessian-vector products.\n");
     }
     // Index reference
     // left = IAJB + IAjb, right = iajb + iaJB
@@ -655,7 +655,7 @@ void ROHF::Hx(SharedMatrix x, SharedMatrix ret) {
         J[1]->subtract(K[2]);
         J[1]->subtract(K[2]->transpose());
 
-        // Transform to MO basis and add to exsisting
+        // Transform to MO basis and add to existing
         auto half_trans = std::make_shared<Matrix>("half_trans temp space", occpi, nsopi_);
 
         half_trans->gemm(true, false, 1.0, Cocc, J[0], 0.0);
@@ -725,7 +725,7 @@ void ROHF::Hx(SharedMatrix x, SharedMatrix ret) {
         J[1]->subtract(K[1]);
         J[1]->subtract(K[1]->transpose());
 
-        // Transform to MO basis and add to exsisting
+        // Transform to MO basis and add to existing
         auto half_trans = std::make_shared<Matrix>("half_trans temp space", occpi, nsopi_);
 
         half_trans->gemm(true, false, 1.0, Cocc, J[0], 0.0);

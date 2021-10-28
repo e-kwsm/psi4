@@ -76,7 +76,7 @@ class PSI_API IntegralTransform {
      * Restricted    - Same alpha and beta orbitals
      * Unrestricted  - Different alpha and beta orbitals
      * SemiCanonical - Start from restricted orbitals and diagnonalize alpha
-     *               - and beta occ-occ and vir-vir block seperately, leading
+     *               - and beta occ-occ and vir-vir block separately, leading
      *               - to different alpha and beta orbitals
      */
     enum class TransformationType { Restricted, Unrestricted, SemiCanonical };

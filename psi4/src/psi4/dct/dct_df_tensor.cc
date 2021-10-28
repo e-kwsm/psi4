@@ -187,7 +187,7 @@ DFTensor DFTensor::contract123(const Matrix& Q, const Matrix& G) {
         throw PSIEXCEPTION("contract123: Left argument must have exactly one irrep.");
     }
     if (G.symmetry()) {
-        throw PSIEXCEPTION("contract123: Right argument must have trivial pont group symmetry");
+        throw PSIEXCEPTION("contract123: Right argument must have trivial point group symmetry");
     }
 
     auto result = DFTensor("Result", Q.colspi()[0], G.rowspi(), G.colspi());
@@ -233,7 +233,7 @@ void DFTensor::add_3idx_transpose_inplace() {
     if (nirrep_ == 1) {
         return;
     }
-    // Proceed to non-totally symmetric. The orbitals of each pair are of differnet symmetires, so
+    // Proceed to non-totally symmetric. The orbitals of each pair are of different symmetires, so
     // treating (p, q) and (q, p) at once means we iterate over half the irrep pairs.
     for (int h = 1; h < nirrep_; h++) {  // h = Irrep of pair
         Mp = pointer(h);

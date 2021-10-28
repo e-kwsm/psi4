@@ -66,7 +66,7 @@ void DFOCC::t2_1st_scs_gen() {
         // T'(ia,jb) -= \sum_{m} T_mj^ab F_mi = \sum_{e} T'(ma,jb) F_mi
         t2p_1new->contract424(1, 2, t2p_1, FijA, -1.0, 1.0);
 
-        // Aplly denominators
+        // Apply denominators
         if (regularization == "FALSE")
             t2p_1new->apply_denom_chem(nfrzc, noccA, FockA);
         else if (regularization == "TRUE")

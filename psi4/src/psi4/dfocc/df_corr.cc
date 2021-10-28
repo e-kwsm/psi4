@@ -118,14 +118,14 @@ void DFOCC::trans_mp2() {
 void DFOCC::df_corr() {
     // outfile->Printf("\tComputing DF-BASIS-CC integrals... \n");
 
-    // Read in the basis set informations
+    // Read in the basis set information
     std::shared_ptr<BasisSet> auxiliary_ = get_basisset("DF_BASIS_CC");
     std::shared_ptr<BasisSet> primary_ = get_basisset("ORBITAL");
 
     std::shared_ptr<BasisSet> zero(BasisSet::zero_ao_basis_set());
     // auxiliary_->print();
 
-    // Read number of auxilary basis
+    // Read number of auxiliary basis
     nQ = auxiliary_->nbf();
 
     // Form J^-1/2

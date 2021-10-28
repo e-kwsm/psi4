@@ -129,7 +129,7 @@ class PSI_API MultipoleSymmetry {
    public:
     /** Constructor
      * Constructs an object that determines the symmetry of the different
-     * components of all multipoles up to (and including) L=order.  For all componenets of a given order
+     * components of all multipoles up to (and including) L=order.  For all components of a given order
      * use the OperatorSymmetry class instead
      *
      * @param order Order of the highest multipole (1 = dipole, 2 = quadrupole, etc.)
