@@ -85,7 +85,7 @@ for rxn in HRXN:
                                       '%s-%s-monoB-unCP' % (dbse, rxn) ]
     ACTV['%s-%s' % (dbse, rxn)] = ['%s-%s-dimer'      % (dbse, rxn) ]
 
-# <<< Reference Values [kcal/mol] from Rezac and Hobza dx.doi.org/10.1021/ct400057w >>>
+# <<< Reference Values [kcal/mol] from Rezac and Hobza doi.org/10.1021/ct400057w >>>
 BIND = {}
 BIND['%s-%s'            % (dbse, 1  )] =    -6.524
 BIND['%s-%s'            % (dbse, 2  )] =    -5.014
