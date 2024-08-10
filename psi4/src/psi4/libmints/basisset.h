@@ -47,7 +47,7 @@
 #include <memory>
 
 namespace libint2 {
-struct Shell;
+class Shell;
 }
 namespace psi {
 
