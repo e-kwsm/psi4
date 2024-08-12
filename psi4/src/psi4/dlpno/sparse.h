@@ -33,7 +33,7 @@
 
 #include <vector>
 
-typedef std::vector<std::vector<int>> SparseMap;
+using SparseMap = std::vector<std::vector<int>>;
 
 namespace psi{
 

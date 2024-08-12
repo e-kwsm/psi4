@@ -54,12 +54,12 @@ class Tensor1i;
 class Tensor2i;
 class Tensor3i;
 
-typedef std::shared_ptr<Tensor1d> SharedTensor1d;
-typedef std::shared_ptr<Tensor2d> SharedTensor2d;
-typedef std::shared_ptr<Tensor3d> SharedTensor3d;
-typedef std::shared_ptr<Tensor1i> SharedTensor1i;
-typedef std::shared_ptr<Tensor2i> SharedTensor2i;
-typedef std::shared_ptr<Tensor3i> SharedTensor3i;
+using SharedTensor1d = std::shared_ptr<Tensor1d>;
+using SharedTensor2d = std::shared_ptr<Tensor2d>;
+using SharedTensor3d = std::shared_ptr<Tensor3d>;
+using SharedTensor1i = std::shared_ptr<Tensor1i>;
+using SharedTensor2i = std::shared_ptr<Tensor2i>;
+using SharedTensor3i = std::shared_ptr<Tensor3i>;
 
 class Tensor1d {
    private:

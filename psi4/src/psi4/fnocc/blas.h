@@ -36,8 +36,8 @@
 #include "psi4/pragma.h"
 #include "blas_mangle.h"
 
-typedef long int integer;
-typedef double doublereal;
+using integer = long int;
+using doublereal = double;
 
 namespace psi {
 namespace fnocc {
