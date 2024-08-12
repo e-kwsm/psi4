@@ -221,8 +221,8 @@ class MultipolePropCalc : public Prop {
     /// Common initialization
     MultipolePropCalc(std::shared_ptr<Wavefunction> wfn, Vector3 const& origin);
     // Output Type of multipole function: name, elec, nuc, tot, order
-    typedef std::vector<std::tuple<std::string, double, double, double, int>> MultipoleOutputTypeBase;
-    typedef std::shared_ptr<MultipoleOutputTypeBase> MultipoleOutputType;
+    using MultipoleOutputTypeBase = std::vector<std::tuple<std::string, double, double, double, int>>;
+    using MultipoleOutputType = std::shared_ptr<MultipoleOutputTypeBase>;
     /// Compute arbitrary-order multipoles up to (and including) l=order. returns name, elec, nuc and tot as vector_ptr
     MultipoleOutputType compute_multipoles(int order, bool transition = false, bool print_output = false,
                                            bool verbose = false);
@@ -250,7 +250,7 @@ class PopulationAnalysisCalc : public Prop {
     PopulationAnalysisCalc();
 
    public:
-    typedef std::shared_ptr<std::vector<double>> SharedStdVector;
+    using SharedStdVector = std::shared_ptr<std::vector<double>>;
     PopulationAnalysisCalc(std::shared_ptr<Wavefunction> wfn);
     ~PopulationAnalysisCalc() override;
     /// Compute Mulliken Charges

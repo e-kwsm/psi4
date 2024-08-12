@@ -1893,7 +1893,7 @@ found_sigma:
 std::shared_ptr<PointGroup> Molecule::find_highest_point_group(double tol) const {
     unsigned char pg_bits = 0;
 
-    typedef void (SymmetryOperation::*symm_func)();
+    using symm_func = void (SymmetryOperation::*)();
 
     // The order of the next 2 arrays MUST match!
     unsigned char symm_bit[] = {SymmOps::C2_z,     SymmOps::C2_y,     SymmOps::C2_x,    SymmOps::i,

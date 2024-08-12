@@ -96,10 +96,10 @@ class PSI_API Molecule {
         Ghost   /*!< Include, but with ghost atoms */
     };
 
-    typedef std::vector<std::shared_ptr<CoordEntry>> EntryVector;
-    typedef EntryVector::iterator EntryVectorIter;
-    typedef std::map<std::string, std::string> Provenance;
-    typedef std::vector<std::tuple<int, int, double>> Connectivity;
+    using EntryVector = std::vector<std::shared_ptr<CoordEntry>>;
+    using EntryVectorIter = EntryVector::iterator;
+    using Provenance = std::map<std::string, std::string>;
+    using Connectivity = std::vector<std::tuple<int, int, double>>;
 
    protected:
     /// Molecule (or fragment) name
