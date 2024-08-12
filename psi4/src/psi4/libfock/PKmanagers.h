@@ -46,7 +46,7 @@ namespace pk {
 
 class PKWorker;
 
-typedef std::shared_ptr<PKWorker> SharedPKWrkr;
+using SharedPKWrkr = std::shared_ptr<PKWorker>;
 
 /*-
   ijklBasisIterator: Iterator that goes through all two-electron integral
