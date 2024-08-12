@@ -3003,7 +3003,7 @@ class OrientationMgr {
         int atomicNumber;
     };
 
-    typedef LAtom LMolecule[];  // An "LMolecule" is an array of LAtoms.
+    using LMolecule = LAtom[];  // An "LMolecule" is an array of LAtoms.
 
     static const LMatrix lIdentityMatrix;  // = {1,0,0, 0,1,0, 0,0,1};
 
