@@ -44,7 +44,7 @@ struct H_zero_block;
 struct ci_blks;
 class CIWavefunction;
 class CIvect;
-typedef std::shared_ptr<psi::detci::CIvect> SharedCIVector;
+using SharedCIVector = std::shared_ptr<psi::detci::CIvect>;
 }  // namespace detci
 }  // namespace psi
 

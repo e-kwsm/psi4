@@ -39,7 +39,7 @@ namespace psi {
 namespace dfoccwave {
 
 class Ektip;
-typedef std::shared_ptr<Ektip> SharedEktip;
+using SharedEktip = std::shared_ptr<Ektip>;
 
 class Ektip {
    private:

@@ -40,13 +40,13 @@ class Options;
 class JK;
 class IntegralTransform;
 class MOSpace;
-typedef std::shared_ptr<Matrix> SharedMatrix;
+using SharedMatrix = std::shared_ptr<Matrix>;
 class SOMCSCF;
 class DFHelper;
 
 // Well this is not ideal
 struct _SlaterDetSet;
-typedef _SlaterDetSet SlaterDetSet;
+using SlaterDetSet = _SlaterDetSet;
 }  // namespace psi
 
 // From the detci module
@@ -60,7 +60,7 @@ struct stringwr;
 struct ci_blks;
 struct olsen_graph;
 struct H_zero_block;
-typedef std::shared_ptr<psi::detci::CIvect> SharedCIVector;
+using SharedCIVector = std::shared_ptr<psi::detci::CIvect>;
 }  // namespace detci
 }  // namespace psi
 
