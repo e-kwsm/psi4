@@ -58,8 +58,8 @@ namespace pk {
 class AOShellSieveIterator;
 class AOFctSieveIterator;
 
-typedef std::unique_ptr<AOShellSieveIterator> UniqueAOShellIt;
-typedef std::shared_ptr<TwoBodyAOInt> SharedInt;
+using UniqueAOShellIt = std::unique_ptr<AOShellSieveIterator>;
+using SharedInt = std::shared_ptr<TwoBodyAOInt>;
 
 /** AOShellSieveIterator provides an iterator over significant shell
  * quartets using a TwoBodyAOInt object.
