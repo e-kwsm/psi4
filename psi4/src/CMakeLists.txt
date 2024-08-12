@@ -2,6 +2,8 @@
 ### >> This allow to propagate dependencies upwards sanely
 add_library(core SHARED core.cc)
 
+set(CMAKE_CXX_CLANG_TIDY clang-tidy --fix --checks=-*,modernize-use-using)
+
 include_directories(
     ${Python_INCLUDE_DIRS}
 )
