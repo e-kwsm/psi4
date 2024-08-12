@@ -107,7 +107,7 @@ std::shared_ptr<BasisSet> construct_basisset_from_pydict(const std::shared_ptr<M
     mol->set_basis_all_atoms(name, key);
 
     // Map of GaussianShells: basis_atom_shell[basisname][atomlabel] = gaussian_shells
-    typedef std::map<std::string, std::map<std::string, std::vector<ShellInfo>>> map_ssv;
+    using map_ssv = std::map<std::string, std::map<std::string, std::vector<ShellInfo>>>;
     map_ssv basis_atom_shell;
     // basisname is uniform; fill map with key/value (gbs entry) pairs of elements from pybs['shell_map']
     py::list basisinfo = pybs["shell_map"].cast<py::list>();
@@ -328,13 +328,13 @@ std::shared_ptr<Molecule> from_dict(py::dict molrec) {
 }
 
 void export_mints(py::module& m) {
-    typedef void (Vector::*vector_setitem_1)(int, double);
-    typedef void (Vector::*vector_setitem_2)(int, int, double);
-    typedef double (Vector::*vector_getitem_1)(int) const;
-    typedef double (Vector::*vector_getitem_2)(int, int) const;
-    typedef double (Vector::*vector_one_double)(const Vector& other);
-    typedef void (Vector::*vector_two)(double scale, const Vector& other);
-    typedef void (Vector::*vector_three)(double alpha, double beta, const Vector &other);
+    using vector_setitem_1 = void (Vector::*)(int, double);
+    using vector_setitem_2 = void (Vector::*)(int, int, double);
+    using vector_getitem_1 = double (Vector::*)(int) const;
+    using vector_getitem_2 = double (Vector::*)(int, int) const;
+    using vector_one_double = double (Vector::*)(const Vector& other);
+    using vector_two = void (Vector::*)(double scale, const Vector& other);
+    using vector_three = void (Vector::*)(double alpha, double beta, const Vector &other);
 
     py::class_<Dimension>(m, "Dimension", "Initializes and defines Dimension Objects")
         .def(py::init<size_t>())
@@ -451,10 +451,10 @@ void export_mints(py::module& m) {
 
     py::class_<IrreppedVector<int>, std::shared_ptr<IrreppedVector<int>>>(m, "ProtoIntVector");
 
-    typedef int (IntVector::*int_vector_get_1)(int) const;
-    typedef int (IntVector::*int_vector_get_2)(int, int) const;
-    typedef void (IntVector::*int_vector_set_1)(int, int);
-    typedef void (IntVector::*int_vector_set_2)(int, int, int);
+    using int_vector_get_1 = int (IntVector::*)(int) const;
+    using int_vector_get_2 = int (IntVector::*)(int, int) const;
+    using int_vector_set_1 = void (IntVector::*)(int, int);
+    using int_vector_set_2 = void (IntVector::*)(int, int, int);
     py::class_<IntVector, std::shared_ptr<IntVector>, IrreppedVector<int>>(m, "IntVector", "Class handling vectors with integer values")
         .def(py::init<int>())
         .def(py::init<const Dimension&>())
@@ -503,24 +503,24 @@ void export_mints(py::module& m) {
         .value("Ghost", Molecule::Ghost)    // Include, but with ghost atoms
         .export_values();
 
-    typedef void (Matrix::*matrix_multiply)(bool, bool, double, const SharedMatrix&, const SharedMatrix&, double);
-    typedef void (Matrix::*matrix_diagonalize)(SharedMatrix&, std::shared_ptr<Vector>&, diagonalize_order);
-    typedef void (Matrix::*matrix_one)(const SharedMatrix&);
-    typedef double (Matrix::*double_matrix_one)(const SharedMatrix&);
-    typedef void (Matrix::*matrix_two)(const SharedMatrix&, const SharedMatrix&);
-    typedef void (Matrix::*matrix_save)(const std::string&, bool, bool, bool);
-    typedef void (Matrix::*matrix_save2)(psi::PSIO* const, size_t, Matrix::SaveType);
-    typedef void (Matrix::*matrix_set1)(double);
-    typedef void (Matrix::*matrix_set3)(int, int, double);
-    typedef void (Matrix::*matrix_set4)(int, int, int, double);
-    typedef double (Matrix::*matrix_get3)(const int&, const int&, const int&) const;
-    typedef double (Matrix::*matrix_get2)(const int&, const int&) const;
-    typedef void (Matrix::*matrix_load)(const std::string&);
-    typedef bool (Matrix::*matrix_load_psio1)(std::shared_ptr<psi::PSIO>&, size_t, const std::string&, int);
-    typedef void (Matrix::*matrix_load_psio2)(std::shared_ptr<psi::PSIO>&, size_t, Matrix::SaveType);
-    typedef const Dimension& (Matrix::*matrix_ret_dimension)() const;
-    typedef void (Matrix::*set_block_shared)(const Slice&, const Slice&, SharedMatrix);
-    typedef SharedMatrix (Matrix::*get_block_shared)(const Slice&, const Slice&) const;
+    using matrix_multiply = void (Matrix::*)(bool, bool, double, const SharedMatrix&, const SharedMatrix&, double);
+    using matrix_diagonalize = void (Matrix::*)(SharedMatrix&, std::shared_ptr<Vector>&, diagonalize_order);
+    using matrix_one = void (Matrix::*)(const SharedMatrix&);
+    using double_matrix_one = double (Matrix::*)(const SharedMatrix&);
+    using matrix_two = void (Matrix::*)(const SharedMatrix&, const SharedMatrix&);
+    using matrix_save = void (Matrix::*)(const std::string&, bool, bool, bool);
+    using matrix_save2 = void (Matrix::*)(psi::PSIO* const, size_t, Matrix::SaveType);
+    using matrix_set1 = void (Matrix::*)(double);
+    using matrix_set3 = void (Matrix::*)(int, int, double);
+    using matrix_set4 = void (Matrix::*)(int, int, int, double);
+    using matrix_get3 = double (Matrix::*)(const int&, const int&, const int&) const;
+    using matrix_get2 = double (Matrix::*)(const int&, const int&) const;
+    using matrix_load = void (Matrix::*)(const std::string&);
+    using matrix_load_psio1 = bool (Matrix::*)(std::shared_ptr<psi::PSIO>&, size_t, const std::string&, int);
+    using matrix_load_psio2 = void (Matrix::*)(std::shared_ptr<psi::PSIO>&, size_t, Matrix::SaveType);
+    using matrix_ret_dimension = const Dimension& (Matrix::*)() const;
+    using set_block_shared = void (Matrix::*)(const Slice&, const Slice&, SharedMatrix);
+    using get_block_shared = SharedMatrix (Matrix::*)(const Slice&, const Slice&) const;
 
     py::enum_<Matrix::SaveType>(m, "SaveType", "The layout of the matrix for saving")
         .value("SubBlocks", Matrix::SaveType::SubBlocks)
@@ -708,8 +708,8 @@ void export_mints(py::module& m) {
             py::return_value_policy::reference_internal);
 
     // Free functions
-    typedef Matrix (*doublet_shared)(const Matrix&, const Matrix&, bool, bool);
-    typedef Matrix (*triplet_shared)(const Matrix&, const Matrix&, const Matrix&, bool, bool, bool);
+    using doublet_shared = Matrix (*)(const Matrix&, const Matrix&, bool, bool);
+    using triplet_shared = Matrix (*)(const Matrix&, const Matrix&, const Matrix&, bool, bool, bool);
     m.def("doublet", doublet_shared(&linalg::doublet),
           "Returns the multiplication of two matrices A and B, with options to transpose each beforehand", "A"_a, "B"_a,
           "transA"_a = false, "transB"_a = false);
@@ -759,8 +759,8 @@ void export_mints(py::module& m) {
         .def("compute", &Deriv::compute, "Compute the gradient", "deriv_calc_type"_a = DerivCalcType::Default)
         .def("compute_df", &Deriv::compute_df, "Compute the density-fitted gradient");
 
-    typedef SharedMatrix (MatrixFactory::*create_shared_matrix)() const;
-    typedef SharedMatrix (MatrixFactory::*create_shared_matrix_name)(const std::string&) const;
+    using create_shared_matrix = SharedMatrix (MatrixFactory::*)() const;
+    using create_shared_matrix_name = SharedMatrix (MatrixFactory::*)(const std::string&) const;
     // Something here is wrong. These will not work with py::args defined, not sure why
     py::class_<MatrixFactory, std::shared_ptr<MatrixFactory>>(m, "MatrixFactory", "Creates Matrix objects")
         .def("create_matrix", create_shared_matrix(&MatrixFactory::create_shared_matrix),
@@ -795,8 +795,8 @@ void export_mints(py::module& m) {
         .def("__getitem__", &Vector3::get, "Returns the arg2-th element of arg1.")
         .def("__setitem__", &Vector3::set, "Set the ar2-th element of to val.");
 
-    typedef void (SymmetryOperation::*intFunction)(int);
-    typedef void (SymmetryOperation::*doubleFunction)(double);
+    using intFunction = void (SymmetryOperation::*)(int);
+    using doubleFunction = void (SymmetryOperation::*)(double);
 
     py::class_<SymmetryOperation>(m, "SymmetryOperation",
                                   "Class to provide a 3 by 3 matrix representation of a symmetry "
@@ -847,10 +847,10 @@ void export_mints(py::module& m) {
     // def("origin", &PointGroup::origin).
     //            def("set_symbol", &PointGroup::set_symbol);
 
-    typedef void (Molecule::*matrix_set_geometry)(const Matrix&);
-    typedef Vector3 (Molecule::*nuclear_dipole1)(const Vector3&) const;
-    typedef Vector3 (Molecule::*nuclear_dipole2)() const;
-    typedef Vector3 (Molecule::*vector_by_index)(int) const;
+    using matrix_set_geometry = void (Molecule::*)(const Matrix&);
+    using nuclear_dipole1 = Vector3 (Molecule::*)(const Vector3&) const;
+    using nuclear_dipole2 = Vector3 (Molecule::*)() const;
+    using vector_by_index = Vector3 (Molecule::*)(int) const;
 
     py::class_<Molecule, std::shared_ptr<Molecule>>(m, "Molecule", py::dynamic_attr(),
                                                     "Class to store the elements, coordinates, "
@@ -1181,12 +1181,12 @@ void export_mints(py::module& m) {
 
     py::bind_vector<std::vector<ShellInfo>>(m, "BSVec");
 
-    typedef void (BasisSet::*basis_print_out)() const;
-    typedef const GaussianShell& (BasisSet::*no_center_version)(int) const;
-    typedef const GaussianShell& (BasisSet::*center_version)(int, int) const;
-    typedef std::shared_ptr<BasisSet> (BasisSet::*ptrversion)(const std::shared_ptr<BasisSet>&) const;
-    typedef int (BasisSet::*ncore_no_args)() const;
-    typedef int (BasisSet::*ncore_one_arg)(const std::string&) const;
+    using basis_print_out = void (BasisSet::*)() const;
+    using no_center_version = const GaussianShell& (BasisSet::*)(int) const;
+    using center_version = const GaussianShell& (BasisSet::*)(int, int) const;
+    using ptrversion = std::shared_ptr<BasisSet> (BasisSet::*)(const std::shared_ptr<BasisSet>&) const;
+    using ncore_no_args = int (BasisSet::*)() const;
+    using ncore_one_arg = int (BasisSet::*)(const std::string&) const;
 
     py::class_<BasisSet, std::shared_ptr<BasisSet>>(m, "BasisSet", "Contains basis set information", py::dynamic_attr())
         .def(py::init<const std::string&, std::shared_ptr<Molecule>,
@@ -1259,7 +1259,7 @@ void export_mints(py::module& m) {
             return py::array(phi_ao->size(), phi_ao->data(), capsule);
         }, "Calculate the value of all basis functions at a given point x, y, and z");
 
-    typedef void (OneBodyAOInt::*vecmatrix_version)(std::vector<SharedMatrix>&);
+    using vecmatrix_version = void (OneBodyAOInt::*)(std::vector<SharedMatrix>&);
     py::class_<OneBodyAOInt, std::shared_ptr<OneBodyAOInt>> pyOneBodyAOInt(
         m, "OneBodyAOInt", "Basis class for all one-electron integrals");
     pyOneBodyAOInt
@@ -1310,8 +1310,8 @@ void export_mints(py::module& m) {
     py::class_<AngularMomentumInt, std::shared_ptr<AngularMomentumInt>>(m, "AngularMomentumInt", pyOneBodyAOInt,
                                                                         "Computes angular momentum integrals");
 
-    typedef bool (TwoBodyAOInt::*compute_shell_significant)(int, int, int, int);
-    typedef size_t (TwoBodyAOInt::*compute_shell_ints)(int, int, int, int);
+    using compute_shell_significant = bool (TwoBodyAOInt::*)(int, int, int, int);
+    using compute_shell_ints = size_t (TwoBodyAOInt::*)(int, int, int, int);
     py::class_<TwoBodyAOInt, std::shared_ptr<TwoBodyAOInt>> pyTwoBodyAOInt(m, "TwoBodyAOInt",
                                                                            "Two body integral base class");
     pyTwoBodyAOInt
@@ -1412,27 +1412,27 @@ void export_mints(py::module& m) {
         .def("overlap_3c", &IntegralFactory::overlap_3c,
              "Returns a OneBodyInt that computes the 3 center overlap integral");
 
-    typedef std::shared_ptr<PetiteList> (MintsHelper::*petite_list_0)() const;
-    typedef std::shared_ptr<PetiteList> (MintsHelper::*petite_list_1)(bool) const;
+    using petite_list_0 = std::shared_ptr<PetiteList> (MintsHelper::*)() const;
+    using petite_list_1 = std::shared_ptr<PetiteList> (MintsHelper::*)(bool) const;
 
-    typedef SharedMatrix (MintsHelper::*erf)(double, SharedMatrix, SharedMatrix, SharedMatrix, SharedMatrix);
-    typedef SharedMatrix (MintsHelper::*eri)(SharedMatrix, SharedMatrix, SharedMatrix, SharedMatrix);
-    typedef SharedMatrix (MintsHelper::*normal_eri)();
-    typedef SharedMatrix (MintsHelper::*normal_eri_factory)(std::shared_ptr<IntegralFactory>);
-    typedef SharedMatrix (MintsHelper::*normal_eri2)(std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet>,
-                                                     std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet>);
-    typedef SharedMatrix (MintsHelper::*normal_3c)(std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet>,
-                                                   std::shared_ptr<BasisSet>);
+    using erf = SharedMatrix (MintsHelper::*)(double, SharedMatrix, SharedMatrix, SharedMatrix, SharedMatrix);
+    using eri = SharedMatrix (MintsHelper::*)(SharedMatrix, SharedMatrix, SharedMatrix, SharedMatrix);
+    using normal_eri = SharedMatrix (MintsHelper::*)();
+    using normal_eri_factory = SharedMatrix (MintsHelper::*)(std::shared_ptr<IntegralFactory>);
+    using normal_eri2 = SharedMatrix (MintsHelper::*)(std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet>,
+                                                      std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet>);
+    using normal_3c = SharedMatrix (MintsHelper::*)(std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet>,
+                                                    std::shared_ptr<BasisSet>);
 
-    typedef SharedMatrix (MintsHelper::*normal_f12)(std::vector<std::pair<double, double>>);
-    typedef SharedMatrix (MintsHelper::*normal_f122)(std::vector<std::pair<double, double>>, std::shared_ptr<BasisSet>,
-                                                     std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet>,
-                                                     std::shared_ptr<BasisSet>);
+    using normal_f12 = SharedMatrix (MintsHelper::*)(std::vector<std::pair<double, double>>);
+    using normal_f122 = SharedMatrix (MintsHelper::*)(std::vector<std::pair<double, double>>, std::shared_ptr<BasisSet>,
+                                                      std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet>,
+                                                      std::shared_ptr<BasisSet>);
 
-    typedef SharedMatrix (MintsHelper::*oneelectron)();
-    typedef SharedMatrix (MintsHelper::*oneelectron_mixed_basis)(std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet>);
-    typedef SharedMatrix (MintsHelper::*perturb_grad_options)(SharedMatrix);
-    typedef SharedMatrix (MintsHelper::*perturb_grad_xyz)(SharedMatrix, double, double, double);
+    using oneelectron = SharedMatrix (MintsHelper::*)();
+    using oneelectron_mixed_basis = SharedMatrix (MintsHelper::*)(std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet>);
+    using perturb_grad_options = SharedMatrix (MintsHelper::*)(SharedMatrix);
+    using perturb_grad_xyz = SharedMatrix (MintsHelper::*)(SharedMatrix, double, double, double);
 
     py::class_<PetiteList, std::shared_ptr<PetiteList>>(m, "PetiteList", "Handles symmetry transformations")
         .def("aotoso", &PetiteList::aotoso, "Return the AO->SO coefficient matrix")
@@ -1662,8 +1662,8 @@ void export_mints(py::module& m) {
              "Compute the interaction between this potential and other external potential")
         .def("print_out", &ExternalPotential::py_print, "Print object summary to the outfile");
 
-    typedef std::shared_ptr<Localizer> (*localizer_with_type)(const std::string&, std::shared_ptr<BasisSet>,
-                                                              std::shared_ptr<Matrix>);
+    using localizer_with_type = std::shared_ptr<Localizer> (*)(const std::string&, std::shared_ptr<BasisSet>,
+                                                               std::shared_ptr<Matrix>);
 
     py::class_<Localizer, std::shared_ptr<Localizer>>(m, "Localizer",
                                                       "Class containing orbital localization procedures")
