@@ -43,7 +43,7 @@ namespace psimrcc {
 void CCOperation::sort() { sort(B_Matrix->get_left(), B_Matrix->get_right(), B_Matrix->get_matrix(), factor); }
 
 void CCOperation::sort(CCIndex* T_left, CCIndex* T_right, std::vector<double**> T_matrix, double constant) {
-    typedef std::vector<size_t> Size_tVec;
+    using Size_tVec = std::vector<size_t>;
     Timer sort_timer;
     // Setup reindexing_array
     // This assumes that the reindexing starts from 1 !!! This can cost you an headache

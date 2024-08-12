@@ -50,7 +50,7 @@ class Wavefunction;
 class PSIO;
 class SOBasisSet;
 
-typedef std::vector<std::shared_ptr<MOSpace> > SpaceVec;
+using SpaceVec = std::vector<std::shared_ptr<MOSpace> >;
 
 /**
    The IntegralTransform class transforms one- and two-electron integrals

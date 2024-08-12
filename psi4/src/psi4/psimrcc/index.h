@@ -61,16 +61,16 @@ namespace psi {
 
 namespace psimrcc {
 
-typedef std::vector<std::vector<int>> vecvecint;
+using vecvecint = std::vector<std::vector<int>>;
 
 /**
         @author Francesco Evangelista <frank@ccc.uga.edu>
 */
 
 class CCIndex {
-    typedef std::vector<int*> pIntVec;
-    typedef std::vector<size_t> Size_tVec;
-    typedef std::vector<size_t*> pSize_tVec;
+    using pIntVec = std::vector<int*>;
+    using Size_tVec = std::vector<size_t>;
+    using pSize_tVec = std::vector<size_t*>;
 
    public:
     ///////////////////////////////////////////////////////////////////////////////

@@ -103,8 +103,8 @@ class BlockMatrix {
 };
 
 class IndexMatrix {
-    typedef std::pair<size_t, int> IMIndex;
-    typedef std::map<IMIndex, BlockMatrix*> BMMap;
+    using IMIndex = std::pair<size_t, int>;
+    using BMMap = std::map<IMIndex, BlockMatrix*>;
 
    public:
     // Constructor and destructor

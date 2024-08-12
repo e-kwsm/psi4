@@ -48,10 +48,10 @@ class CCIndex;
   @author Francesco Evangelista <frank@ccc.uga.edu>
 */
 class CCMatrix {
-    typedef std::vector<std::pair<int, int> > intpairvec;
-    typedef std::vector<double> DoubleVec;
-    typedef std::vector<size_t> Size_tVec;
-    typedef std::vector<bool> BoolVec;
+    using intpairvec = std::vector<std::pair<int, int> >;
+    using DoubleVec = std::vector<double>;
+    using Size_tVec = std::vector<size_t>;
+    using BoolVec = std::vector<bool>;
 
    public:
     ///////////////////////////////////////////////////////////////////////////////
