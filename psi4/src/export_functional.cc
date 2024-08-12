@@ -194,8 +194,8 @@ void export_functional(py::module &m) {
         .def("xclib_description", &SuperFunctional::xclib_description, "LibXC version and citation string.")
         .def("set_xclib_description", &SuperFunctional::set_xclib_description, "Sets the LibXC version and citation string");
 
-    typedef void (LibXCFunctional::*tweak_set1)(std::vector<double>, bool);
-    typedef void (LibXCFunctional::*tweak_set2)(std::map<std::string, double>, bool);
+    using tweak_set1 = void (LibXCFunctional::*)(std::vector<double>, bool);
+    using tweak_set2 = void (LibXCFunctional::*)(std::map<std::string, double>, bool);
 
     py::class_<LibXCFunctional, std::shared_ptr<LibXCFunctional>, Functional>(m, "LibXCFunctional", "docstring")
         .def(py::init<std::string, bool>())
@@ -219,8 +219,8 @@ void export_functional(py::module &m) {
         .def("compute_functions", &BasisFunctions::compute_functions, "docstring")
         .def("basis_values", &BasisFunctions::basis_values, "docstring");
 
-    typedef void (PointFunctions::*matrix_set1)(SharedMatrix);
-    typedef void (PointFunctions::*matrix_set2)(SharedMatrix, SharedMatrix);
+    using matrix_set1 = void (PointFunctions::*)(SharedMatrix);
+    using matrix_set2 = void (PointFunctions::*)(SharedMatrix, SharedMatrix);
 
     py::class_<PointFunctions, std::shared_ptr<PointFunctions>, BasisFunctions>(m, "PointFunctions", "docstring")
         .def("print_out", &PointFunctions::print, "out_fname"_a = "outfile", "print"_a = 2, "docstring")

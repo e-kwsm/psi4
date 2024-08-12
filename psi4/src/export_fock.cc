@@ -156,9 +156,9 @@ void export_fock(py::module &m) {
     py::class_<DiskSOMCSCF, std::shared_ptr<DiskSOMCSCF>, SOMCSCF>(m, "DiskSOMCSCF", "docstring");
 
     // DF Helper
-    typedef SharedMatrix (DFHelper::*take_string)(std::string);
-    typedef SharedMatrix (DFHelper::*tensor_access3)(std::string, std::vector<size_t>, std::vector<size_t>,
-                                                     std::vector<size_t>);
+    using take_string = SharedMatrix (DFHelper::*)(std::string);
+    using tensor_access3 = SharedMatrix (DFHelper::*)(std::string, std::vector<size_t>, std::vector<size_t>,
+                                                      std::vector<size_t>);
 
     py::class_<DFHelper, std::shared_ptr<DFHelper>>(m, "DFHelper", "docstring")
         .def(py::init<std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet> >())
