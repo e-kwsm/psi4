@@ -33,7 +33,7 @@
 #include "matrix_base.h"
 #include <string>
 
-typedef std::vector<int> vecint;
+using vecint = std::vector<int>;
 
 extern FILE* outfile;
 

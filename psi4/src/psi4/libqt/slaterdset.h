@@ -52,13 +52,13 @@ struct String {
 /*!
   StringSet is a set of strings
 */
-typedef struct {
+struct StringSet {
     String *strings;
     int size;
     int nelec;
     int ndrc;
     short int *drc_occ;
-} StringSet;
+};
 
 void stringset_init(StringSet *stringset, int size, int nelec, int ndrc, short int *frozen_occ);
 void stringset_delete(StringSet *stringset);
@@ -70,10 +70,10 @@ void stringset_reindex(StringSet *stringset, short int *mo_map);
 /*!
   SlaterDet is a Slater determinant
 */
-typedef struct {
+struct SlaterDet {
     int index;
     int alphastring, betastring;
-} SlaterDet;
+};
 
 /*!
   SlaterDetSet is a set of Slater determinants
@@ -94,11 +94,11 @@ void slaterdetset_read(size_t unit, const char *prefix, SlaterDetSet **sdset);
 /*!
   SlaterDetVector is a vector in the space of determinants
 */
-typedef struct {
+struct SlaterDetVector {
     int size;
     SlaterDetSet *sdset;
     double *coeffs;
-} SlaterDetVector;
+};
 
 void slaterdetvector_init(SlaterDetVector *sdvector, SlaterDetSet *sdset);
 void slaterdetvector_delete(SlaterDetVector *sdvector);

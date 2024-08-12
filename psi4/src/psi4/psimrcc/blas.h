@@ -63,10 +63,10 @@ enum DiisType { DiisEachCycle, DiisCC };
 */
 class CCBLAS {
    public:
-    typedef std::vector<std::string> strvec;
-    typedef std::vector<int> intvec;
-    typedef std::vector<std::pair<int, int> > intpairvec;
-    typedef std::deque<CCOperation> OpDeque;
+    using strvec = std::vector<std::string>;
+    using intvec = std::vector<int>;
+    using intpairvec = std::vector<std::pair<int, int> >;
+    using OpDeque = std::deque<CCOperation>;
 
     CCBLAS(std::shared_ptr<PSIMRCCWfn> wfn, Options& options);
     ~CCBLAS();

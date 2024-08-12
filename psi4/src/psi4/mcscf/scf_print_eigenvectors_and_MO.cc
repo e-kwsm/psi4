@@ -42,7 +42,7 @@ namespace psi {
 namespace mcscf {
 
 void SCF::print_eigenvectors_and_MO() {
-    typedef std::vector<std::pair<double, std::string> >::iterator vecstr_it;
+    using vecstr_it = std::vector<std::pair<double, std::string> >::iterator;
 
     // Assumes the eigenvalues of some Fock operator
     // are in the SBlockVector epsilon
