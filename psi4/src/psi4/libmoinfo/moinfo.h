@@ -41,8 +41,8 @@ namespace psi {
 enum ReferenceType { AllRefs, UniqueRefs, ClosedShellRefs, UniqueOpenShellRefs };
 
 class MOInfo : public MOInfoBase {
-    typedef std::vector<std::string> strvec;
-    typedef std::vector<std::pair<int, int> > intpairvec;
+    using strvec = std::vector<std::string>;
+    using intpairvec = std::vector<std::pair<int, int> >;
 
    public:
     /*********************************************************
@@ -72,7 +72,7 @@ class MOInfo : public MOInfoBase {
         const MOInfo* moinfo;
 
        public:
-        typedef std::bitset<2048> bitdet;  // adjust based on "size det"?
+        using bitdet = std::bitset<2048>;  // adjust based on "size det"?
         SlaterDeterminant(const MOInfo*);
         ~SlaterDeterminant();
         void set(int n) { bits.set(n); }

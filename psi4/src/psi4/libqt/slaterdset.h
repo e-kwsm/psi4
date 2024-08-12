@@ -43,11 +43,11 @@ namespace psi {
 /*!
   String is an orbital occupation string
 */
-typedef struct {
+struct String {
     int index;
     short int *occ; /* Orbital indices in QT order */
                     /* CDS: I'm gonna use Pitzer order actually */
-} String;
+};
 
 /*!
   StringSet is a set of strings

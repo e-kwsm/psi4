@@ -51,7 +51,7 @@ enum class ScreeningType { None, Schwarz, CSAM, QQR, Density };
 
 enum PermutedOrder { ABCD = 0, BACD = 1, ABDC = 2, BADC = 3, CDAB = 4, CDBA = 5, DCAB = 6, DCBA = 7 };
 
-typedef std::vector<std::pair<int, int>> ShellPairBlock;
+using ShellPairBlock = std::vector<std::pair<int, int>>;
 
 class IntegralFactory;
 class AOShellCombinationsIterator;
@@ -326,7 +326,7 @@ class PSI_API TwoBodyAOInt {
     virtual void initialize_sieve();
 };
 
-typedef std::shared_ptr<TwoBodyAOInt> SharedTwoBodyAOInt;
+using SharedTwoBodyAOInt = std::shared_ptr<TwoBodyAOInt>;
 
 }  // namespace psi
 

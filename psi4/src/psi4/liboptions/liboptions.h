@@ -334,8 +334,8 @@ class PSI_API ArrayType : public DataType {
 #endif
 class MapType : public DataType {
     std::map<std::string, Data> keyvals_;
-    typedef std::map<std::string, Data>::iterator iterator;
-    typedef std::map<std::string, Data>::const_iterator const_iterator;
+    using iterator = std::map<std::string, Data>::iterator;
+    using const_iterator = std::map<std::string, Data>::const_iterator;
 
    public:
     MapType();
@@ -372,9 +372,9 @@ class PSI_API Options {
     /// "Global" set of options
     std::map<std::string, Data> globals_;
 
-    typedef std::map<std::string, Data>::iterator iterator;
-    typedef std::map<std::string, Data>::const_iterator const_iterator;
-    typedef std::map<std::string, std::map<std::string, Data> >::const_iterator const_mod_iterator;
+    using iterator = std::map<std::string, Data>::iterator;
+    using const_iterator = std::map<std::string, Data>::const_iterator;
+    using const_mod_iterator = std::map<std::string, std::map<std::string, Data> >::const_iterator;
 
    public:
     Options();

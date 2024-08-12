@@ -48,7 +48,7 @@ namespace psi {
 
 std::vector<std::string> split(const std::string &str) {
     // Split a string
-    typedef std::string::const_iterator iter;
+    using iter = std::string::const_iterator;
     std::vector<std::string> splitted_string;
     iter i = str.begin();
     while (i != str.end()) {
@@ -87,7 +87,7 @@ bool closing_square_bracket(char c);
 
 std::vector<std::string> split_indices(const std::string &str) {
     // Split a string
-    typedef std::string::const_iterator iter;
+    using iter = std::string::const_iterator;
     strvec splitted_string;
     iter i = str.begin();
     while (i != str.end()) {
