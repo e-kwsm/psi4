@@ -1116,8 +1116,8 @@ void TwoBodySOInt::compute_integrals_deriv1(TwoBodySOIntFunctor &functor) {
     }
 }
 
-typedef std::shared_ptr<OneBodySOInt> SharedOneBodySOInt;
-typedef std::shared_ptr<TwoBodySOInt> SharedTwoBodySOInt;
+using SharedOneBodySOInt = std::shared_ptr<OneBodySOInt>;
+using SharedTwoBodySOInt = std::shared_ptr<TwoBodySOInt>;
 }  // namespace psi
 
 #endif  // _psi_src_lib_libmints_sointegral_h_

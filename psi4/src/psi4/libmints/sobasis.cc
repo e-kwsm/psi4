@@ -295,7 +295,7 @@ void SOBasisSet::init() {
     // Create a map that has a key/value pair
     // The key is the angular momentum function of the SO shell arranged in decending order
     // The value is the actual shell number
-    typedef std::pair<int, int> am_to_so_shell_pair;
+    using am_to_so_shell_pair = std::pair<int, int>;
     std::multimap<int, int, std::less<int> > am_to_so_shell_list;
     for (int i = 0; i < nshell_; i++) {
         am_to_so_shell_list.insert(am_to_so_shell_pair(naofunction(i), i));

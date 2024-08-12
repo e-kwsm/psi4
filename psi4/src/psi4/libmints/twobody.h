@@ -51,7 +51,7 @@ enum class ScreeningType { None, Schwarz, CSAM, QQR, Density };
 
 enum PermutedOrder { ABCD = 0, BACD = 1, ABDC = 2, BADC = 3, CDAB = 4, CDBA = 5, DCAB = 6, DCBA = 7 };
 
-typedef std::vector<std::pair<int, int>> ShellPairBlock;
+using ShellPairBlock = std::vector<std::pair<int, int>>;
 
 class IntegralFactory;
 class AOShellCombinationsIterator;
@@ -114,7 +114,7 @@ class PSI_API TwoBodyAOInt {
     /*
      * Sieve information
      */
-    typedef std::vector<std::pair<int, int>> PairList;
+    using PairList = std::vector<std::pair<int, int>>;
     /// The threshold below which integrals are to be neglected
     double screening_threshold_;
     double screening_threshold_squared_;
@@ -318,7 +318,7 @@ class PSI_API TwoBodyAOInt {
     void pure_transform(int, int, int, int, int nchunk, bool copy_to_source = true);
 };
 
-typedef std::shared_ptr<TwoBodyAOInt> SharedTwoBodyAOInt;
+using SharedTwoBodyAOInt = std::shared_ptr<TwoBodyAOInt>;
 
 }  // namespace psi
 

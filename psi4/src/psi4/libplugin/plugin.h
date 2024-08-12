@@ -37,14 +37,14 @@
 namespace psi {
 
 // Useful typedef's
-typedef SharedWavefunction (*plugin_t)(SharedWavefunction, Options&);
-typedef int (*read_options_t)(std::string, Options&);
+using plugin_t = SharedWavefunction (*)(SharedWavefunction, Options&);
+using read_options_t = int (*)(std::string, Options&);
 
 // DEPRECATED but left so that existing plugins will work.
 #define INIT_PLUGIN
 
 // The following lines are used by the PSI4 driver.
-typedef struct plugin_info_struct {
+ struct plugin_info {
     // Uppercased plugin name.
     std::string name;
 
@@ -56,7 +56,7 @@ typedef struct plugin_info_struct {
 
     // Function pointer to the plugin's read_options function
     read_options_t read_options;
-} plugin_info;
+};
 
 /**
   Loads a plugin from disk and calls its initialization routine.

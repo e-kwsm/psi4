@@ -50,14 +50,14 @@ double type_to_MiB(size_t n) {
  */
 double bytes_to_MiB(size_t n);
 
-typedef struct {
+struct AllocationEntry {
     void *variable;
     std::string type;
     std::string variableName;
     std::string fileName;
     size_t lineNumber;
     std::vector<size_t> argumentList;
-} AllocationEntry;
+};
 
 class MemoryManager {
    public:

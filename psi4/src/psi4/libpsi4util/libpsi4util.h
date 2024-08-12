@@ -39,7 +39,7 @@
 
 namespace psi {
 
-typedef std::vector<std::string> strvec;
+using strvec = std::vector<std::string>;
 
 std::string file_to_string(std::string const &name);
 

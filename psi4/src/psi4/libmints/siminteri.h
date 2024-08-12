@@ -37,8 +37,8 @@ namespace psi {
 
 class SimintTwoElectronInt : public TwoBodyAOInt {
    public:
-    typedef std::vector<simint_multi_shellpair> ShellPairVec;
-    typedef std::vector<simint_shell> ShellVec;
+    using ShellPairVec = std::vector<simint_multi_shellpair>;
+    using ShellVec = std::vector<simint_shell>;
 
     SimintTwoElectronInt(const IntegralFactory* integral, int deriv = 0, bool use_shell_pairs = false, bool needs_exchange = false);
     ~SimintTwoElectronInt() override;

@@ -69,14 +69,14 @@ void PSIO::open(size_t unit, int status) {
     // Check if any files will have the same name
     {
         using std::string;
-        typedef std::map<string, int> Names;
+        using Names = std::map<string, int>;
         Names names;
         for (i = 0; i < this_unit->numvols; i++) {
             std::ostringstream oss;
             get_volpath(unit, i, &path);
             oss << path << name << "." << unit;
             const std::string fullpath = oss.str();
-            typedef Names::const_iterator citer;
+            using citer = Names::const_iterator;
             citer n = names.find(fullpath);
             if (n != names.end()) psio_error(unit, PSIO_ERROR_IDENTVOLPATH);
             names[fullpath] = 1;
@@ -158,14 +158,14 @@ bool PSIO::exists(size_t unit) {
     // Check if any files will have the same name
     {
         using std::string;
-        typedef std::map<string, int> Names;
+        using Names = std::map<string, int>;
         Names names;
         for (i = 0; i < this_unit->numvols; i++) {
             std::ostringstream oss;
             get_volpath(unit, i, &path);
             oss << path << name << "." << unit;
             const std::string fullpath = oss.str();
-            typedef Names::const_iterator citer;
+            using citer = Names::const_iterator;
             citer n = names.find(fullpath);
             if (n != names.end()) psio_error(unit, PSIO_ERROR_IDENTVOLPATH);
             names[fullpath] = 1;
