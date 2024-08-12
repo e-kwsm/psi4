@@ -78,11 +78,11 @@ struct SlaterDet {
 /*!
   SlaterDetSet is a set of Slater determinants
 */
-typedef struct _SlaterDetSet {
+struct SlaterDetSet {
     int size;
     SlaterDet *dets;
     StringSet *alphastrings, *betastrings;
-} SlaterDetSet;
+};
 
 void slaterdetset_init(SlaterDetSet *sdset, int size, StringSet *alphastrings, StringSet *betastrings);
 void slaterdetset_delete(SlaterDetSet *sdset);
