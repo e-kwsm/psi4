@@ -96,7 +96,7 @@
 #ifdef _OPENMP
 #include <omp.h>
 #else
-typedef int omp_lock_t;
+using omp_lock_t = int;
 #define omp_init_lock(lock_timer_p) \
     do {                            \
     } while (0)

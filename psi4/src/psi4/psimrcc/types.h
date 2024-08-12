@@ -29,7 +29,7 @@
 #ifndef _psi_src_bin_psimrcc_types_h_
 #define _psi_src_bin_psimrcc_types_h_
 
-typedef std::vector<std::vector<double>> ArrayVec;
-typedef std::map<std::string, double***> SortMap;
+using ArrayVec = std::vector<std::vector<double>>;
+using SortMap = std::map<std::string, double***>;
 
 #endif  // _psi_src_bin_psimrcc_types_h_

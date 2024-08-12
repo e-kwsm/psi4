@@ -35,7 +35,7 @@
 #include "vector_base.h"
 #include "psi4/libpsi4util/memory_manager.h"
 
-typedef std::vector<int> vecint;
+using vecint = std::vector<int>;
 
 namespace psi {
 namespace mcscf {
