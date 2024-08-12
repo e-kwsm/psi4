@@ -501,7 +501,7 @@ class PSI_API DFHelper {
     std::vector<size_t> strides_;
 
     // => FILE IO maintenence <=
-    typedef struct StreamStruct {
+    struct StreamStruct {
         StreamStruct();
         StreamStruct(std::string filename, std::string op, bool activate = true);
         ~StreamStruct();
@@ -515,7 +515,8 @@ class PSI_API DFHelper {
         bool open_ = false;
         std::string filename_;
 
-    } Stream;
+    };
+    using Stream = StreamStruct;
 
     std::map<std::string, std::shared_ptr<Stream>> file_streams_;
     FILE* stream_check(std::string filename, std::string op);
