@@ -327,7 +327,7 @@ class PSI_API PSIO {
     /// Current default namespace (for PREFIX.NAMESPACE.UNIT numbering)
     static std::string default_namespace_;
 
-    typedef std::map<std::string, std::string> KWDMap;
+    using KWDMap = std::map<std::string, std::string>;
     /// library configuration is described by a set of keywords
     KWDMap files_keywords_;
 

@@ -214,7 +214,7 @@ class LimitExceeded : public PsiException {
 */
 template <class T = double>
 class StepSizeError : public LimitExceeded<T> {
-    typedef LimitExceeded<T> ParentClass;
+    using ParentClass = LimitExceeded<T>;
 
    public:
     /**
