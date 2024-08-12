@@ -1405,7 +1405,7 @@ std::vector<SharedVector> MultipolePropCalc::compute_mo_extents(bool print_outpu
     return mo_es;
 }
 
-typedef PopulationAnalysisCalc PAC;
+using PAC = PopulationAnalysisCalc;
 PopulationAnalysisCalc::PopulationAnalysisCalc(std::shared_ptr<Wavefunction> wfn) : Prop(wfn) {
     // No internal state. num_noon is now an argument.
 }

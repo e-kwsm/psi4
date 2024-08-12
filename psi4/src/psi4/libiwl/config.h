@@ -31,8 +31,8 @@
 
 namespace psi {
 
-typedef short int Label;
-typedef double Value;
+using Label = short int;
+using Value = double;
 
 #define IWL_KEY_BUF "IWL Buffers"
 #define IWL_KEY_ONEL "IWL One-electron matrix elements"

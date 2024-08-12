@@ -164,7 +164,7 @@ class PSI_API OneBodyAOInt {
     const std::vector<const double*>& buffers() const { return buffers_; }
 };
 
-typedef std::shared_ptr<OneBodyAOInt> SharedOneBodyAOInt;
+using SharedOneBodyAOInt = std::shared_ptr<OneBodyAOInt>;
 
 /// For a pair of basis sets, provides a list of integer pairs that index all significant (i.e. whose overlap is
 /// above the threshold) pairs that exist.  If the basis sets are different, the full Cartesian product is considered
