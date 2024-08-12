@@ -81,7 +81,7 @@ using namespace pybind11::literals;
 #include <pybind11/functional.h>
 
 void export_wavefunction(py::module& m) {
-    typedef void (Wavefunction::*take_sharedwfn)(SharedWavefunction);
+    using take_sharedwfn = void (Wavefunction::*)(SharedWavefunction);
     py::class_<Wavefunction, std::shared_ptr<Wavefunction>>(m, "Wavefunction", "docstring", py::dynamic_attr())
         .def(py::init<std::shared_ptr<Molecule>, std::shared_ptr<BasisSet>, Options&>())
         .def(py::init<std::shared_ptr<Molecule>, std::shared_ptr<BasisSet>>())
@@ -512,7 +512,7 @@ void export_wavefunction(py::module& m) {
                                                    std::shared_ptr<psi::detci::CIvect>, int, int, SharedVector,
                                                    SharedVector) = &detci::CIWavefunction::sigma;
 
-    typedef std::vector<SharedMatrix> (detci::CIWavefunction::*form_density_sig)(
+    using form_density_sig = std::vector<SharedMatrix> (detci::CIWavefunction::*)(
         std::shared_ptr<psi::detci::CIvect>, std::shared_ptr<psi::detci::CIvect>, int, int);
 
     py::class_<detci::CIWavefunction, std::shared_ptr<detci::CIWavefunction>, Wavefunction>(m, "CIWavefunction",
