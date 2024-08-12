@@ -38,7 +38,7 @@
 
 namespace psi {
 namespace fnocc {
-typedef long int size_t;
+using size_t = long;
 struct integral {
     size_t ind;
     double val;

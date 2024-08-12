@@ -36,8 +36,8 @@ namespace psi {
 
 namespace psimrcc {
 
-typedef std::vector<std::string> strvec;
-typedef std::vector<std::pair<int, int> > intpairvec;
+using strvec = std::vector<std::string>;
+using intpairvec = std::vector<std::pair<int, int>>;
 
 bool is_number(const std::string& str);
 double get_number(const std::string& str);
