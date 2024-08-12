@@ -117,10 +117,10 @@ void export_trans(py::module& m) {
                        "moOrdering"_a = IntegralTransform::MOOrdering::QTOrder,
                        "FrozenOrbitals"_a = IntegralTransform::FrozenOrbitals::OccAndVir, "initialize"_a = true);
 
-    typedef int (IntegralTransform::*DPD_ID_1)(const std::string&);
-    typedef int (IntegralTransform::*DPD_ID_2)(const char);
-    typedef int (IntegralTransform::*DPD_ID_3)(const std::shared_ptr<MOSpace>, const std::shared_ptr<MOSpace>,
-                                               IntegralTransform::SpinType, bool);
+    using DPD_ID_1 = int (IntegralTransform::*)(const std::string&);
+    using DPD_ID_2 = int (IntegralTransform::*)(const char);
+    using DPD_ID_3 = int (IntegralTransform::*)(const std::shared_ptr<MOSpace>, const std::shared_ptr<MOSpace>,
+                                                IntegralTransform::SpinType, bool);
 
     int_trans_bind.def("initialize", &IntegralTransform::initialize, "Initialize an IntegralTransform")
         .def("presort_so_tei", &IntegralTransform::presort_so_tei, "docstring")
