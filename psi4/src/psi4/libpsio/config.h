@@ -75,13 +75,14 @@ struct psio_vol {
     int stream;
 };
 
-typedef struct psio_entry {
+struct psio_entry {
     char key[PSIO_KEYLEN];
     psio_address sadd;
     psio_address eadd;
     struct psio_entry *next;
     struct psio_entry *last;
-} psio_tocentry;
+};
+using psio_tocentry = psio_entry;
 
 struct psio_ud {
     size_t numvols;
