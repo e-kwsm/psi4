@@ -75,6 +75,6 @@ class PSI_API GridBlock {
     void setTruePoints(int n) { true_points_ = n; }
     void setMaxPoints(int n) { max_points_ = n; }
 };
-typedef std::shared_ptr<GridBlock> SharedGridBlock;
+using SharedGridBlock = std::shared_ptr<GridBlock>;
 }  // namespace psi
 #endif
