@@ -157,8 +157,8 @@ void export_fock(py::module &m) {
 
     // DF Helper
     using take_string = SharedMatrix (DFHelper::*)(std::string);
-    using tensor_access3 = SharedMatrix (DFHelper::*)(std::string, std::vector<size_t>, std::vector<size_t>,
-                                                      std::vector<size_t>);
+    using tensor_access3 =
+        SharedMatrix (DFHelper::*)(std::string, std::vector<size_t>, std::vector<size_t>, std::vector<size_t>);
 
     py::class_<DFHelper, std::shared_ptr<DFHelper>>(m, "DFHelper", "docstring")
         .def(py::init<std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet> >())

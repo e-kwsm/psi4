@@ -334,7 +334,7 @@ void export_mints(py::module& m) {
     using vector_getitem_2 = double (Vector::*)(int, int) const;
     using vector_one_double = double (Vector::*)(const Vector& other);
     using vector_two = void (Vector::*)(double scale, const Vector& other);
-    using vector_three = void (Vector::*)(double alpha, double beta, const Vector &other);
+    using vector_three = void (Vector::*)(double alpha, double beta, const Vector& other);
 
     py::class_<Dimension>(m, "Dimension", "Initializes and defines Dimension Objects")
         .def(py::init<size_t>())
@@ -1421,13 +1421,13 @@ void export_mints(py::module& m) {
     using normal_eri_factory = SharedMatrix (MintsHelper::*)(std::shared_ptr<IntegralFactory>);
     using normal_eri2 = SharedMatrix (MintsHelper::*)(std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet>,
                                                       std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet>);
-    using normal_3c = SharedMatrix (MintsHelper::*)(std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet>,
-                                                    std::shared_ptr<BasisSet>);
+    using normal_3c =
+        SharedMatrix (MintsHelper::*)(std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet>);
 
     using normal_f12 = SharedMatrix (MintsHelper::*)(std::vector<std::pair<double, double>>);
-    using normal_f122 = SharedMatrix (MintsHelper::*)(std::vector<std::pair<double, double>>, std::shared_ptr<BasisSet>,
-                                                      std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet>,
-                                                      std::shared_ptr<BasisSet>);
+    using normal_f122 =
+        SharedMatrix (MintsHelper::*)(std::vector<std::pair<double, double>>, std::shared_ptr<BasisSet>,
+                                      std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet>);
 
     using oneelectron = SharedMatrix (MintsHelper::*)();
     using oneelectron_mixed_basis = SharedMatrix (MintsHelper::*)(std::shared_ptr<BasisSet>, std::shared_ptr<BasisSet>);
@@ -1665,8 +1665,8 @@ void export_mints(py::module& m) {
              "Compute the interaction between this potential and other external potential")
         .def("print_out", &ExternalPotential::py_print, "Print object summary to the outfile");
 
-    using localizer_with_type = std::shared_ptr<Localizer> (*)(const std::string&, std::shared_ptr<BasisSet>,
-                                                               std::shared_ptr<Matrix>);
+    using localizer_with_type =
+        std::shared_ptr<Localizer> (*)(const std::string&, std::shared_ptr<BasisSet>, std::shared_ptr<Matrix>);
 
     py::class_<Localizer, std::shared_ptr<Localizer>>(m, "Localizer",
                                                       "Class containing orbital localization procedures")
