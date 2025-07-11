@@ -9,8 +9,8 @@
 
 namespace psi {
 
-    using ShellPairBlock = std::vector<std::pair<int, int>>;
-    using ShellPairData = std::vector<std::shared_ptr<libint2::ShellPair>>;
+using ShellPairBlock = std::vector<std::pair<int, int>>;
+using ShellPairData = std::vector<std::shared_ptr<libint2::ShellPair>>;
 
     class ShellPair {
 
